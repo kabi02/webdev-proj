@@ -10,6 +10,11 @@
     <script src="https://kit.fontawesome.com/1231aac50b.js" crossorigin="anonymous"></script>
     <title>TravelMates</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+	<!--fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[url('/assets/travelmate.jpg')] bg-cover sm:bg-fixed">
     <nav class="relative px-10 py-8 flex justify-between items-center bg-white">
@@ -19,7 +24,7 @@
 				<i class="fa-sharp fa-solid fa-bars fa-2xl" style="color: #000000;"></i>
 			</button>
 		</div>
-		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
 			<li><a class="text-sm font-bold text-black pr-5" href="#">Home</a></li>
 			<li><a class="text-sm font-bold text-black pr-5" href="#">About Us</a></li>
 			<li><a class="text-sm font-bold text-black pr-5" href="#">Services</a></li>
@@ -44,7 +49,9 @@
 					</svg>
 				</button>
 			</div>
-			<div>
+			
+			<!--hamburger menu pop-up-->
+			<!-- <div>
 				<ul>
 					<li class="mb-1">
 						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Home</a>
@@ -63,6 +70,7 @@
 					</li>
 				</ul>
 			</div>
+
 			<div class="mt-auto">
 				<div class="pt-6">
 					<a class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" href="#">Sign in</a>
@@ -71,9 +79,24 @@
 				<p class="my-4 text-xs text-center text-gray-400">
 					<span>Copyright © 2021</span>
 				</p>
-			</div>
+			</div>-->
+			
 		</nav>
 	</div>
     </header>
-</body>
-</html>
+
+	<!--center div-->
+	<div class="flex flex-wrap px-32 py-10">
+		<div class="flex flex-col items-start">
+			<div class="flex-row text-center">
+				<h1 class="font-sans font-extrabold text-[80px]">TOP</h1>
+				<span class="font-sans font-extrabold text-[48px]">VISITED</span><br>
+				<span class="font-sans font-extrabold text-[48px]">PLACES</span>
+			</div>
+			<button class="w-[620px] h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-sans font-semibold text-lg pl-5">PALAWAN</button>
+			<button class="w-[620px] h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-sans font-semibold text-lg pl-5">VIGAN</button>
+			<button class="w-[620px] h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-sans font-semibold text-lg pl-5">INTRAMUROS</button>
+		</div> 
+	</div> 
+</body> 
+</html> 
