@@ -16,9 +16,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-[url('/assets/travelmate.jpg')] bg-cover sm:bg-fixed">
+<body class="bg-[url('/assets/travelmate.jpg')] bg-cover sm:bg-fixed scroll-px-1">
     <nav class="relative px-10 py-8 flex justify-between items-center bg-white">
-		<img src="/assets/med-logo.png" alt="">
+		<img src="/assets/med-logo.png" class="max-w-full" alt="">
 		<div class="lg:hidden">
 			<button class="navbar-burger flex items-center text-black p-3">
 				<i class="fa-sharp fa-solid fa-bars fa-2xl" style="color: #000000;"></i>
@@ -86,17 +86,15 @@
     </header>
 
 	<!--center div-->
-	<div class="flex flex-wrap px-32 py-10">
-		<div class="flex flex-col items-start">
-			<div class="flex-row text-center">
-				<h1 class="font-opensans font-extrabold text-[80px]">TOP</h1>
-				<span class="font-opensans font-extrabold text-[48px]">VISITED</span><br>
-				<span class="font-opensans font-extrabold text-[48px]">PLACES</span>
-			</div>
-			<button class="w-[620px] h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">PALAWAN</button>
-			<button class="w-[620px] h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">VIGAN</button>
-			<button class="w-[620px] h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">INTRAMUROS</button>
-		</div> 
+    <div class="flex flex-col items-start max-w-[700px] ml-40 mt-32 md:mx-20 sm:mx-10">
+        <div class="flex-row text-center">
+            <h1 class="font-opensans font-extrabold text-[80px]">TOP</h1>
+            <span class="font-opensans font-extrabold text-[48px]">VISITED</span><br>
+            <span class="font-opensans font-extrabold text-[48px]">PLACES</span>
+        </div>
+        <button class="w-full h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">PALAWAN</button>
+        <button class="w-full h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">VIGAN</button>
+        <button class="w-full h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">INTRAMUROS</button>
 	</div> 
 </body> 
 </html> 
