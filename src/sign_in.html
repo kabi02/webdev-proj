@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+
     <!--tailwindcss import-->
     <script src="https://cdn.tailwindcss.com"></script>
     <!--fontawesome import-->
     <script src="https://kit.fontawesome.com/1231aac50b.js" crossorigin="anonymous"></script>
-    <title>TravelMates</title>
+    <title>TravelMates' Sign In</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 
 	<!--fonts-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
 	integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[url('/assets/travelmate.jpg')] bg-cover sm:bg-fixed scroll-px-1">
+
+    <!-- Main Nav -->
     <nav class="relative px-10 py-8 flex justify-between items-center bg-white">
 		<img src="/assets/med-logo.png" class="max-w-full" alt="">
 		<div class="lg:hidden">
@@ -33,11 +37,12 @@
 			<li><a class="text-sm font-bold text-black" href="#">Pricing</a></li>
 			<li><a class="text-sm font-bold text-black pl-5" href="#">Contact</a></li>
 		</ul>
-		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-gray-900 font-bold rounded-xl transition duration-200" href="sign_in.html">Sign In</a>
-		<a class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-500 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Sign up</a>
+		<a href="sign_in.html" class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-gray-900 font-bold rounded-xl transition duration-200">Sign In</a>
+		<a class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-500 text-sm text-white font-bold rounded-xl transition duration-200" href="sign_in.html">Sign up</a>
 	</nav>
 	<div class="navbar-menu relative z-50 hidden">
 		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+
 		<!-- Phone nav -->
         <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-3/5 md:w-6/12 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
             <div class="flex items-center mb-8">
@@ -110,16 +115,34 @@
         </nav>
 	</div>
 
-	<!--center div-->
-    <div class="flex flex-col items-start max-w-[700px] ml-40 mt-32 md:mx-20 sm:mx-10">
-        <div class="flex-row text-center">
-            <h1 class="font-opensans font-extrabold text-[80px]">TOP</h1>
-            <span class="font-opensans font-extrabold text-[48px]">VISITED</span><br>
-            <span class="font-opensans font-extrabold text-[48px]">PLACES</span>
-        </div>
-        <button class="w-full h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">PALAWAN</button>
-        <button class="w-full h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">VIGAN</button>
-        <button class="w-full h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">INTRAMUROS</button>
+	<!--Main Sign in div-->
+    <div class="flex justify-center items-center h-screen">
+        <div class="w-1/3 px-6 py-6 shadow-lg bg-white rounded-2xl drop-shadow-2xl">
+            <a href="index.html"><i class="fa-solid fa-chevron-left"></i> Back</a>
+            <h1 class="text-3xl font-bold text-center block">Login</h1>
+
+            <form action="#">
+                <div class="mt-12 px-16">
+                    <label for="username">
+                        <input type="text" id="username" placeholder="Username" pattern="[a-zA-Z0-9_]+$" required
+                        class="border-b-2 w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600">
+                    </label>
+                </div>
+                <div class="mt-8 px-16">
+                    <label for="password">
+                        <input type="password" id="password" placeholder="Password" required
+                        class="border-b-2 w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600">
+                    </label>
+                </div>
+                <div class="mt-16 px-16">
+                    <button type="submit" class="border-none bg-black text-white text-base 
+                    h-10 w-full rounded-full hover:bg-gray-800 transition: duration-200">Login</button>
+                </div>
+                <div class="mt-2 mb-10">
+                    <p class="text-center text-gray-500 dark:text-gray-400">Not a member? 
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-300">Sign up</a></p>
+                </div>
+            </form>
 	</div> 
 
 	<!--scripts-->
