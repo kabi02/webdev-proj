@@ -21,102 +21,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[url('/assets/travelmate.jpg')] bg-cover sm:bg-fixed scroll-px-1">
-
-    <!-- Main Nav -->
-    <nav class="relative px-10 py-8 flex justify-between items-center bg-white">
-		<img src="/assets/med-logo.png" class="max-w-full" alt="">
-		<div class="lg:hidden">
-			<button class="navbar-burger flex items-center text-black p-3">
-				<i class="fa-sharp fa-solid fa-bars fa-2xl" style="color: #000000;"></i>
-			</button>
-		</div>
-		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
-			<li><a class="text-sm font-bold text-black pr-5" href="index.html">Home</a></li>
-			<li><a class="text-sm font-bold text-black pr-5" href="#">About Us</a></li>
-			<li><a class="text-sm font-bold text-black pr-5" href="#">Services</a></li>
-			<li><a class="text-sm font-bold text-black" href="#">Pricing</a></li>
-			<li><a class="text-sm font-bold text-black pl-5" href="#">Contact</a></li>
-		</ul>
-		<a href="sign_in.html" class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-gray-900 font-bold rounded-xl transition duration-200">Sign In</a>
-		<a class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-500 text-sm text-white font-bold rounded-xl transition duration-200" href="sign_in.html">Sign up</a>
-	</nav>
-	<div class="navbar-menu relative z-50 hidden">
-		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-
-		<!-- Phone nav -->
-        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-3/5 md:w-6/12 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
-            <div class="flex items-center mb-8">
-                <button class="navbar-close">
-                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <!-- Hidden -->
-            <div>
-                <ul>
-                    <li class="mb-1 flex p-4 gap-2 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded border-b-2">
-                        <div class="w-1/2">
-                            <i class="fa-solid fa-house mr-4"></i>
-                            <a class="" href="index.html">Home</a>
-                        </div>
-                        <div class="text-right w-1/2">
-                            <i class="fa-solid fa-chevron-right"></i> 
-                        </div>                           
-                    </li>
-                    <li class="mb-1 flex p-4 gap-2 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded border-b-2">
-                        <div class="w-1/2">
-                            <i class="fa-solid fa-circle-info mr-4"></i>
-                            <a class="" href="#">About</a>
-                        </div>
-                        <div class="text-right w-1/2">
-                            <i class="fa-solid fa-chevron-right"></i> 
-                        </div>                           
-                    </li>
-                    <li class="mb-1 flex p-4 gap-2 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded border-b-2">
-                        <div class="w-1/2">
-                            <i class="fa-solid fa-circle-info mr-4"></i>
-                            <a class="" href="#">Pricing</a>
-                        </div>
-                        <div class="text-right w-1/2">
-                            <i class="fa-solid fa-chevron-right"></i> 
-                        </div>                           
-                    </li>
-                    <li class="mb-1 flex p-4 gap-2 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded border-b-2">
-                        <div class="w-1/2">
-                            <i class="fa-solid fa-circle-info mr-4"></i>
-                            <a class="" href="#">Contact</a>
-                        </div>
-                        <div class="text-right w-1/2">
-                            <i class="fa-solid fa-chevron-right"></i> 
-                        </div>                           
-                    </li>
-                    
-                    <li class="mb-1 flex p-4 gap-2 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded border-b-2">
-                        <div class="w-1/2">
-                            <i class="fa-solid fa-circle-info mr-4"></i>
-                            <a class="" href="#">Blog</a>
-                        </div>
-                        <div class="text-right w-1/2">
-                            <i class="fa-solid fa-chevron-right"></i> 
-                        </div>                           
-                    </li>
-                </ul>
-            </div>
-            <div class="mt-auto">
-                <div class="pt-6">
-                    <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" href="sign_in.html">Sign in</a>
-                    <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" href="#">Sign Up</a>
-                </div>
-                <p class="my-4 text-xs text-center text-gray-400">
-                    <span>Copyright © 2021</span>
-                </p>
-            </div>
-        </nav>
-	</div>
-
 	<!--Main Sign in div-->
-    <div class="flex justify-center items-center h-screen">
+    <div class="flex flex-col justify-center items-center h-screen">
+        <img src="/assets/med-logo.png" class="pb-8" alt="">
         <div class="w-96 px-6 py-6 shadow-lg bg-white rounded-2xl drop-shadow-2xl">
             <a href="index.html"><i class="fa-solid fa-chevron-left"></i> Back</a>
             <h1 class="text-3xl font-bold text-center block">Login</h1>
@@ -144,49 +51,5 @@
                 </div>
             </form>
 	</div> 
-
-	<!--scripts-->
-	<script>
-        // Burger menus
-        document.addEventListener('DOMContentLoaded', function() {
-            // open
-            const burger = document.querySelectorAll('.navbar-burger');
-            const menu = document.querySelectorAll('.navbar-menu');
-        
-            if (burger.length && menu.length) {
-                for (var i = 0; i < burger.length; i++) {
-                    burger[i].addEventListener('click', function() {
-                        for (var j = 0; j < menu.length; j++) {
-                            menu[j].classList.toggle('hidden');
-                        }
-                    });
-                }
-            }
-        
-            // close
-            const close = document.querySelectorAll('.navbar-close');
-            const backdrop = document.querySelectorAll('.navbar-backdrop');
-        
-            if (close.length) {
-                for (var i = 0; i < close.length; i++) {
-                    close[i].addEventListener('click', function() {
-                        for (var j = 0; j < menu.length; j++) {
-                            menu[j].classList.toggle('hidden');
-                        }
-                    });
-                }
-            }
-        
-            if (backdrop.length) {
-                for (var i = 0; i < backdrop.length; i++) {
-                    backdrop[i].addEventListener('click', function() {
-                        for (var j = 0; j < menu.length; j++) {
-                            menu[j].classList.toggle('hidden');
-                        }
-                    });
-                }
-            }
-        });
-        </script>
 </body> 
 </html> 
