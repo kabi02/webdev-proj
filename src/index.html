@@ -19,7 +19,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[url('/assets/travelmate.jpg')] bg-cover sm:bg-fixed scroll-px-1">
-    <nav class="relative px-5 sm:px-10 py-8 flex justify-between items-center bg-white">
+    <!-- NAVBAR -->
+    <nav class="relative px-5 sm:px-10 py-4 sm:py-5 md:py-6 lg:py-8 flex justify-between items-center bg-white">
 		<img src="/assets/med-logo.png" class="max-w-full" alt="">
         <!-- Hamburger Icon -->
 		<div class="lg:hidden">
@@ -28,11 +29,11 @@
 			</button>
 		</div>
 		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
-			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 pr-5" href="index.html">Home</a></li>
-			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400  pr-5" href="#">About Us</a></li>
-			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400  pr-5" href="#">Services</a></li>
-			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 " href="#">Pricing</a></li>
-			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 pl-5" href="#">Contact</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="index.html">Home</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="#">About Us</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="#">Services</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150" href="#">Pricing</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pl-5" href="#">Contact</a></li>
 		</ul>
 		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm sm:text-base text-gray-900 font-bold rounded-xl transition duration-200 hover:bg-gray-100" href="sign_in.html">Sign In</a>
 		<a class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-500 text-sm sm:text-base text-white font-bold rounded-xl transition duration-200" href="#">Sign up</a>
@@ -111,16 +112,22 @@
         </nav>
 	</div>
 
-	<!--center div-->
-    <div class="flex flex-col items-start max-w-[700px] mx-4 mt-32 sm:mx-10 md:mx-20">
-        <div class="flex-row text-center">
-            <h1 class="font-opensans font-extrabold text-[80px]">TOP</h1>
-            <span class="font-opensans font-extrabold text-[48px]">VISITED</span><br>
-            <span class="font-opensans font-extrabold text-[48px]">PLACES</span>
+	<!--main div-->
+    <div class="flex flex-col items-start max-w-[600px] mx-4 mt-12 sm:mt-32 sm:mx-10 md:mx-20 h-fit">
+        <div class="grid grid-cols-2 gap-4 pb-7 justify-center items-center">
+            <div class="flex-row text-center">
+                <h1 class="font-opensans leading-none font-extrabold text-[70px] min-[400px]:text-[110px] sm:text-[180px]">TOP</h1>
+                <span class="font-opensans text-center m-0 font-extrabold text-[20px] min-[400px]:text-[30px] sm:text-[48px]">VISITED</span><br>
+                <span class="font-opensans text-center m-0 font-extrabold text-[20px] min-[400px]:text-[30px] sm:text-[48px]">PLACES</span>
+            </div>   
+            <img src="/assets/ph-vector.svg" class="sm:h-[350px] object-contain">
         </div>
-        <button class="w-full h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">PALAWAN</button>
-        <button class="w-full h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">VIGAN</button>
-        <button class="w-full h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">INTRAMUROS</button>
+        
+        <button class="w-full h-[70px] sm:h-[95px] bg-[url('/assets/top-places/palawan.svg')] rounded-[13px] mb-4 text-start text-white font-opensans font-semibold text-base sm:text-lg pl-5 transition duration-150 ease-in-out hover:scale-105 hover:shadow-2xl">PALAWAN</button>
+        <button class="w-full h-[70px] sm:h-[95px] bg-[url('/assets/top-places/vigan.svg')] rounded-[13px] mb-4 text-start text-white font-opensans font-semibold text-base sm:text-lg pl-5 transition duration-150 ease-in-out hover:scale-105 hover:shadow-2xl">VIGAN</button>
+        <button class="w-full h-[70px] sm:h-[95px] bg-[url('/assets/top-places/intramuros.svg')] rounded-[13px] mb-4 text-start text-white font-opensans font-semibold text-base sm:text-lg pl-5 transition duration-150 ease-in-out hover:scale-105 hover:shadow-2xl">INTRAMUROS</button>
+
+        <div class="text-right w-full font-semibold cursor-pointer sm:text-base text-sm transition duration-300 hover:text-gray-400">See More  <i class="fa-solid fa-chevron-right"></i></div>
 	</div> 
 
 	<!--scripts-->
