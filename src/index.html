@@ -19,27 +19,27 @@
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[url('/assets/travelmate.jpg')] bg-cover sm:bg-fixed scroll-px-1">
-    <nav class="relative px-5 sm:px-10 py-8 flex justify-between items-center bg-white">
+    <!-- NAVBAR -->
+    <nav class="relative px-5 sm:px-10 py-4 sm:py-5 md:py-6 lg:py-8 flex justify-between items-center bg-white">
 		<img src="/assets/med-logo.png" class="max-w-full" alt="">
+        <!-- Hamburger Icon -->
 		<div class="lg:hidden">
 			<button class="navbar-burger flex items-center text-black p-3">
-				<i class="fa-sharp fa-solid fa-bars fa-2xl" style="color: #000000;"></i>
+				<i class="fa-sharp fa-solid fa-bars sm:text-3xl text-xl" style="color: #000000;"></i>
 			</button>
 		</div>
 		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
-			<li><a class="text-sm font-bold text-black pr-5" href="index.html">Home</a></li>
-			<li><a class="text-sm font-bold text-black pr-5" href="#">About Us</a></li>
-			<li><a class="text-sm font-bold text-black pr-5" href="#">Services</a></li>
-			<li><a class="text-sm font-bold text-black" href="#">Pricing</a></li>
-			<li><a class="text-sm font-bold text-black pl-5" href="#">Contact</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="index.html">Home</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="#">About Us</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="#">Services</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150" href="#">Pricing</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pl-5" href="#">Contact</a></li>
 		</ul>
-		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-gray-900 font-bold rounded-xl transition duration-200" href="sign_in.html">Sign In</a>
-		<a class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-500 text-sm text-white font-bold rounded-xl transition duration-200" href="#">Sign up</a>
+		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm sm:text-base text-gray-900 font-bold rounded-xl transition duration-200 hover:bg-gray-100" href="sign_in.html">Sign In</a>
+		<a class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-500 text-sm sm:text-base text-white font-bold rounded-xl transition duration-200" href="#">Sign up</a>
 	</nav>
 	<div class="navbar-menu relative z-50 hidden">
-
 		<div class="navbar-backdrop fixed inset-0 bg-black opacity-60"></div>
-
 		<!-- Phone nav -->
         <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-3/5 md:w-6/12 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
             <div class="flex items-center mb-8">
@@ -52,51 +52,49 @@
             <!-- Hidden -->
             <div>
                 <ul>
-                    <li class="mb-1 flex p-4 gap-2 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded border-b-2">
-                        <div class="w-1/2">
-                            <i class="fa-solid fa-house mr-4"></i>
-
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-house mr-2 sm:mr-4 "></i>
                             <a class="" href="index.html">Home</a>
-
                         </div>
-                        <div class="text-right w-1/2">
+                        <div class="text-right sm:w-1/2 ">
                             <i class="fa-solid fa-chevron-right"></i> 
                         </div>                           
                     </li>
-                    <li class="mb-1 flex p-4 gap-2 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded border-b-2">
-                        <div class="w-1/2">
-                            <i class="fa-solid fa-circle-info mr-4"></i>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-circle-info mr-2 sm:mr-4 "></i>
                             <a class="" href="#">About</a>
                         </div>
-                        <div class="text-right w-1/2">
+                        <div class="text-right sm:w-1/2 ">
                             <i class="fa-solid fa-chevron-right"></i> 
                         </div>                           
                     </li>
-                    <li class="mb-1 flex p-4 gap-2 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded border-b-2">
-                        <div class="w-1/2">
-                            <i class="fa-solid fa-circle-info mr-4"></i>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-circle-info mr-2 sm:mr-4 "></i>
                             <a class="" href="#">Pricing</a>
                         </div>
-                        <div class="text-right w-1/2">
+                        <div class="text-right sm:w-1/2 ">
                             <i class="fa-solid fa-chevron-right"></i> 
                         </div>                           
                     </li>
-                    <li class="mb-1 flex p-4 gap-2 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded border-b-2">
-                        <div class="w-1/2">
-                            <i class="fa-solid fa-circle-info mr-4"></i>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-circle-info mr-2 sm:mr-4 "></i>
                             <a class="" href="#">Contact</a>
                         </div>
-                        <div class="text-right w-1/2">
+                        <div class="text-right sm:w-1/2 ">
                             <i class="fa-solid fa-chevron-right"></i> 
                         </div>                           
                     </li>
                     
-                    <li class="mb-1 flex p-4 gap-2 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded border-b-2">
-                        <div class="w-1/2">
-                            <i class="fa-solid fa-circle-info mr-4"></i>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-circle-info mr-2 sm:mr-4 "></i>
                             <a class="" href="#">Blog</a>
                         </div>
-                        <div class="text-right w-1/2">
+                        <div class="text-right sm:w-1/2 ">
                             <i class="fa-solid fa-chevron-right"></i> 
                         </div>                           
                     </li>
@@ -104,9 +102,8 @@
             </div>
             <div class="mt-auto">
                 <div class="pt-6">
-
                     <a class="block px-4 py-3 mb-3 leading-none text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl" href="sign_in.html">Sign in</a>
-                    <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" href="#">Sign Up</a>
+                    <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-black hover:bg-gray-500 rounded-xl" href="#">Sign Up</a>
                 </div>
                 <p class="my-4 text-xs text-center text-gray-400">
                     <span class="font-opensans">TravelMates © 2023</span>
@@ -115,21 +112,47 @@
         </nav>
 	</div>
 
-	<!--center div-->
-    <div class="flex flex-col items-start max-w-[700px] mx-4 mt-32 sm:mx-10 md:mx-20">
-        <div class="flex-row text-center">
-            <h1 class="font-opensans font-extrabold text-[80px]">TOP</h1>
-            <span class="font-opensans font-extrabold text-[48px]">VISITED</span><br>
-            <span class="font-opensans font-extrabold text-[48px]">PLACES</span>
+	<!--main div-->
+    <div class="flex min-[1100px]:flex-row flex-col mb-14 mt-12 sm:mt-14 gap-0 md:mx-20 sm:mx-10 min-[400px]:mx-5 mx-2 justify-between">
+        <!-- left side -->
+        <div class="flex flex-col items-start min-[1100px]:w-2/3 mx-4 mb-11 h-fit">
+            <div class="grid grid-cols-2 gap-4 pb-7 justify-center items-center">
+                <div class="flex-row text-center">
+                    <h1 class="font-opensans leading-none font-extrabold text-[70px] min-[400px]:text-[110px] sm:text-[120px] min-[980px]:text-[180px]">TOP</h1>
+                    <span class="font-opensans text-center m-0 font-extrabold text-[20px] min-[400px]:text-[30px] sm:text-[48px]">VISITED</span><br>
+                    <span class="font-opensans text-center m-0 font-extrabold text-[20px] min-[400px]:text-[30px] sm:text-[48px]">PLACES</span>
+                </div>   
+                <img src="/assets/ph-vector.svg" class="sm:h-[330px] min-[980px]:h-[350px] object-contain">
+            </div>
+            
+            <button class="w-full h-[70px] sm:h-[95px] bg-no-repeat bg-cover bg-[url('/assets/top-places/palawan.svg')] rounded-[13px] mb-4 text-start text-white font-opensans font-semibold text-base sm:text-lg pl-5 transition duration-150 ease-in-out hover:scale-105 hover:shadow-2xl">PALAWAN</button>
+            <button class="w-full h-[70px] sm:h-[95px] bg-no-repeat bg-cover bg-[url('/assets/top-places/vigan.svg')] rounded-[13px] mb-4 text-start text-white font-opensans font-semibold text-base sm:text-lg pl-5 transition duration-150 ease-in-out hover:scale-105 hover:shadow-2xl">VIGAN</button>
+            <button class="w-full h-[70px] sm:h-[95px] bg-no-repeat bg-cover bg-[url('/assets/top-places/intramuros.svg')] rounded-[13px] mb-4 text-start text-white font-opensans font-semibold text-base sm:text-lg pl-5 transition duration-150 ease-in-out hover:scale-105 hover:shadow-2xl">INTRAMUROS</button>
+    
+            <div class="text-right w-full font-semibold cursor-pointer sm:text-base text-sm transition duration-300 hover:text-gray-400">See More  <i class="fa-solid fa-chevron-right"></i></div>
+        </div> 
+
+        <!-- right side -->
+        <div class="min-[1100px]:w-1/3 mx-5 not-italic font-normal text-base leading-5 text-justify text-white font-opensans bg-[rgba(0,0,0,0.65)] rounded-xl p-8">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan lobortis augue, a ornare ex elementum nec. Praesent facilisis diam sit amet justo interdum, ac sodales tellus mollis. Nam mauris ipsum, condimentum et enim at, pulvinar dapibus turpis. Sed tincidunt nec elit ac suscipit. Quisque pharetra blandit diam. Morbi blandit, diam tempus tristique vulputate, lectus orci vestibulum enim, sed convallis justo felis ac ante. Praesent lobortis lorem mollis ornare efficitur. Nullam eu pellentesque mi, sit amet viverra odio.
+            <br><br>Ut sodales sollicitudin neque, vel vestibulum quam aliquam vitae. Proin est turpis, suscipit at sem vitae, luctus tempus turpis. Etiam dictum nisl non dui finibus, quis semper nisl pharetra. Mauris pretium dictum neque. Integer maximus, ex a sollicitudin ornare, ligula ligula lobortis sapien, non euismod dolor turpis id mauris. Vestibulum auctor at ante at ultricies. Aenean porttitor egestas nulla. Etiam vitae ligula suscipit, congue diam at, sagittis orci.
         </div>
-        <button class="w-full h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">PALAWAN</button>
-        <button class="w-full h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">VIGAN</button>
-        <button class="w-full h-[95px] bg-black rounded-[15px] mb-4 text-start text-white font-opensans font-semibold text-lg pl-5">INTRAMUROS</button>
-	</div> 
+    </div>
+
+    <footer>
+        <div class="flex flex-col bg-[#292929] font-opensans text-white justify-center items-center text-center py-10 min-[350px]:px-6">
+            <h3 class="font-extrabold mb-2">TravelMates</h3>
+            <p class="font-light max-w-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan lobortis augue, a ornare ex elementum nec. Praesent facilisis diam sit amet justo interdum, ac sodales tellus mollis. Nam mauris ipsum, condimentum et enim at, pulvinar dapibus turpis.</p>
+            <div class="pt-4">
+                <i class="fa-brands fa-square-facebook fa-xl fa-fw" style="color: #ffffff;"></i>
+                <i class="mx-3 fa-brands fa-instagram fa-xl fa-fw" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-twitter fa-xl fa-fw" style="color: #ffffff;"></i>
+            </div>
+        </div>
+    </footer>
 
 	<!--scripts-->
 	<script>
-
         // Burger menus
         document.addEventListener('DOMContentLoaded', function() {
             // open
@@ -171,7 +194,5 @@
             }
         });
         </script>
-
 </body> 
 </html> 
-
