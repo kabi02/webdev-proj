@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="m-0 p-0 box-border scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+
+    <!--tailwindcss import-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--fontawesome import-->
+    <script src="https://kit.fontawesome.com/1231aac50b.js" crossorigin="anonymous"></script>
+    <title>TravelMates' Sign In</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+	<!--fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+	integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-[url('/assets/travelmate.jpg')] bg-cover sm:bg-fixed scroll-px-1">
+	<!--Main Sign up div-->
+    <div class="flex flex-col justify-center items-center h-full py-12">
+        <img src="/assets/med-logo.png" class="pb-8" alt="">
+
+                <form class="bg-white w-2/3 px-16 py-3 shadow-lg rounded-2xl">
+                    <div>
+                        <h1 class="mt-4 text-3xl font-bold text-left">Create an Account</h1>
+                        <div class="mb-6">
+                            <p>Already have an account? 
+                            <a href="sign_in.html" class="text-blue-600 hover:text-blue-300">Login here</a></p>
+                        </div>
+                    </div>
+                    <div class="grid gap-3 md:grid-cols-3 mb-6">
+                        <div>
+                            <label for="f-name" class="block mb-2 text-sm font-medium text-gray-900">First Name<span class="text-medium text-red-700">*</span></label>
+                            <input type="text" id="f-name" autocomplete="off" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Enter First Name..." required>
+                        </div>
+                        <div>
+                            <label for="m-name" class="block mb-2 text-sm font-medium text-gray-900">Middle Name</label>
+                            <input type="text" id="m-name" autocomplete="off" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Enter Middle Name...">
+                        </div>
+                        <div>
+                            <label for="l-name" class="block mb-2 text-sm font-medium text-gray-900">Last Name<span class="text-medium text-red-700">*</span></label>
+                            <input type="text" id="l-name" autocomplete="off" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Enter Last Name..." required>
+                        </div>
+                    </div>
+                    <div class="grid gap-4 mb-6 md:grid-cols-2">
+                        <div>
+                            <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone Number<span class="text-medium text-red-700">*</span></label>
+                            <input type="tel" id="phone" autocomplete="off" pattern="[0]{1}[9]{1}[0-9]{9}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Enter PH Phone Number..." required>
+                            <small class="text-gray-500">Format: 09XXXXXXXXX</small>
+                        </div>  
+                        <div>
+                            <label for="gender" class="block mb-2 text-sm font-medium text-gray-900">Choose your Gender<span class="text-medium text-red-700">*</span></label>
+                            <select id="gender" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                                <option value="NA">Prefer not to say</option>
+                              </select>
+                        </div>
+                        <div>
+                            <label for="birthdate" class="block mb-2 text-sm font-medium text-gray-900">Birthdate<span class="text-medium text-red-700">*</span></label>
+                            <input type="date" id="birthdate" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+                        </div>
+                        <div>
+                            <label for="age" class="block mb-2 text-sm font-medium text-gray-900">Age<span class="text-medium text-red-700">*</span></label>
+                            <input type="number" min="1" max="100" value="18" id="age" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+                        </div>                   
+                    </div>
+                    <div class="mb-6">
+                        <label for="Username" class="block mb-2 text-sm font-medium text-gray-900">Username<span class="text-medium text-red-700">*</span></label>
+                        <input type="text" id="username" autocomplete="off" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Enter Username...">
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email address<span class="text-medium text-red-700">*</span></label>
+                        <input type="email" id="email" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Enter Email..." pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+                        <small class="text-gray-500">Format: example@example.com</small>
+                    </div> 
+                    <div class="mb-6">
+                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Password<span class="text-medium text-red-700">*</span></label>
+                        <input type="password" id="password" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="•••••••••" >
+                    </div> 
+                    <div class="mb-6">
+                        <label for="confirm_password" class="block mb-2 text-sm font-medium text-gray-900">Confirm password<span class="text-medium text-red-700">*</span></label>
+                        <input type="password" id="confirm_password" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="•••••••••" >
+                    </div> 
+                    <div class="flex items-start mb-6">
+                        <div class="flex items-center h-5">
+                        <input id="remember" type="checkbox" value="" required class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" >
+                        </div>
+                        <label for="remember" class="ml-2 text-sm font-medium text-gray-900">I agree with the <a href="#" class="text-blue-600 hover:underline">terms and conditions</a>.</label>
+                    </div>
+                    <button type="submit" class="mb-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
+                </form>
+	</div> 
+</body>
+
+</html> 
