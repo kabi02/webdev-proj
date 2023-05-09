@@ -26,6 +26,9 @@ module.exports = {
         'opensans': ['Open Sans', 'sans-serif']
       },
     },
+    container:{
+      center:true,
+    }
   },
   plugins: [],
 }

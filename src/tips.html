@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="m-0 p-0 box-border scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--tailwindcss import-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--fontawesome import-->
+    <script src="https://kit.fontawesome.com/1231aac50b.js" crossorigin="anonymous"></script>
+    <title>TravelMates</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+	<!--fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+	integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <!-- importing footer -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/src/scripts/script.js"></script>
+</head>
+<body class="bg-[url('/assets/travelmate.jpg')] bg-cover sm:bg-fixed scroll-px-1">
+    <!-- NAVBAR -->
+    <nav class="relative px-5 sm:px-10 py-4 sm:py-5 md:py-6 lg:py-8 flex justify-between items-center bg-white">
+		<img src="/assets/med-logo.png" class="max-w-full" alt="">
+        <!-- Hamburger Icon -->
+		<div class="lg:hidden">
+			<button class="navbar-burger flex items-center text-black p-3">
+				<i class="fa-sharp fa-solid fa-bars sm:text-3xl text-xl" style="color: #000000;"></i>
+			</button>
+		</div>
+		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="index.html">Home</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="about.html">About</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="tips.html">TIPS</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150" href="contact.html">Contact</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pl-5" href="blog.html">Blog</a></li>
+		</ul>
+		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm sm:text-base text-gray-900 font-bold rounded-xl transition duration-200 hover:bg-gray-100" href="sign_in.html">Sign In</a>
+		<a class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-500 text-sm sm:text-base text-white font-bold rounded-xl transition duration-200" href="sign_up.html">Sign up</a>
+	</nav>
+	<div class="navbar-menu relative z-50 hidden">
+		<div class="navbar-backdrop fixed inset-0 bg-black opacity-60"></div>
+		<!-- Phone nav -->
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-3/5 md:w-6/12 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-8">
+                <button class="navbar-close">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Hidden -->
+            <div>
+                <ul>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-house mr-2 sm:mr-4 "></i>
+                            <a class="" href="index.html">Home</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-circle-info mr-2 sm:mr-4 "></i>
+                            <a class="" href="about.html">About</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-list-check mr-2 sm:mr-4 "></i>
+                            <a class="" href="tips.html">Tips</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-envelope mr-2 sm:mr-4 "></i>
+                            <a class="" href="contact.html">Contact</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-globe mr-2 sm:mr-4 "></i>
+                            <a class="" href="blog.html">Blog</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-auto">
+                <div class="pt-6">
+                    <a class="block px-4 py-3 mb-3 leading-none text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl" href="sign_in.html">Sign in</a>
+                    <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-black hover:bg-gray-500 rounded-xl" href="sign_up.html">Sign Up</a>
+                </div>
+                <p class="my-4 text-xs text-center text-gray-400">
+                    <span class="font-opensans">TravelMates © 2023</span>
+                </p>
+            </div>
+        </nav>
+	</div>
+
+    <!-- CONTENT -->
+    <h1 class="text-center text-[40px] sm:text-[70px] md:text-[100px] font-extrabold py-3">TIPS</h1>
+    <div class="md:container md:mx-auto flex flex-col max-lg:px-5">
+        <!-- Welcome Message -->
+        <div class="w-12/12 text-justify text-black font-opensans text-base sm:text-lg md:flex-row flex bg-[rgba(255,255,255)] rounded-xl p-8 mt-3 mb-3">
+            <div class="w-full">
+                <p>Welcome to our travel tips page! Here, we will provide you with essential information
+                    to make your next trip enjoyable and hassle-free as possible. Whether you're a seasoned
+                    traveller or a first-time explorer, we've got you covered. From breathtaking beaches and
+                    other natural wonders to vibrant cities, we are here to help you make the most out of
+                    every experience!</p>
+            </div>
+        </div>  
+
+        <!-- Tips -->
+        <div class="w-12/12 items-center text-white font-opensans text-base sm:text-lg md:flex-row bg-center bg-[rgba(0,0,0,0.65)] rounded-xl p-8 mt-3 mb-3">
+            <div class="flex justify-center items-center max-sm:flex-col">
+              <div class="w-1/2 pr-2 max-sm:w-auto">
+                <h1 class="text-2xl font-bold text-center">Research and plan ahead.</h1>
+              </div>
+              <div class="w-1/2 pl-2 text-left max-sm:w-auto">
+                <p>Plan your itinerary and do some study on the locations you wish to visit before you leave. Doing this
+                    will help you make the most out of your time and avoid missing out on must-see locations.</p>
+              </div> 
+            </div>
+        </div>
+
+        <div class="w-12/12 items-center text-black font-opensans text-base sm:text-lg md:flex-row bg-center bg-[rgba(255,255,255,0.65)] rounded-xl p-8 mt-3 mb-3">
+            <div class="flex justify-center items-center max-sm:flex-col">
+              <div class="w-1/2 pr-2 text-right max-sm:w-auto">
+                <h1 class="text-2xl font-bold text-center">Book in advance.</h1>
+              </div>
+              <div class="w-1/2 pl-2 text-left max-sm:w-auto">
+                <p>Book your flight and accommodations in advance to avoid increased prices and fully-book hotels.
+                    This is important especially during peak seasons.</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="w-12/12 items-center text-white font-opensans text-base sm:text-lg md:flex-row bg-center bg-[rgba(0,0,0,0.65)] rounded-xl p-8 mt-3 mb-3">
+            <div class="flex justify-center items-center max-sm:flex-col">
+              <div class="w-1/2 pr-2 text-right max-sm:w-auto">
+                <h1 class="text-2xl font-bold text-center">Pack suitably.</h1>
+              </div>
+              <div class="w-1/2 pl-2 text-left max-sm:w-auto">
+                <p>Make sure that you have everything you need for your trip. For items that can be bought at your destination such as toiletries, you can
+                    opt not to bring them. This will help you save more space and bring additional necessary items such as clothes. Also, plan outfits
+                    ahead to avoid overpacking.</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="w-12/12 items-center text-black font-opensans text-base sm:text-lg md:flex-row bg-center bg-[rgba(255,255,255,0.65)] rounded-xl p-8 mt-3 mb-3">
+            <div class="flex justify-center items-center max-sm:flex-col">
+              <div class="w-1/2 pr-2 text-right max-sm:w-auto">
+                <h1 class="text-2xl font-bold text-center">Recognize your choices for getting<br>around and the current traffic scenario.</h1>
+              </div>
+              <div class="w-1/2 pl-2 text-left max-sm:w-auto">
+                <p>Transportation options and traffic situation will affect your itinerary so researching about the current traffic situation of your
+                    destination could help you plan your route, choose the best mode of transportation, and avoid getting lost or stranded.</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="w-12/12 items-center text-white font-opensans text-base sm:text-lg md:flex-row bg-center bg-[rgba(0,0,0,0.65)] rounded-xl p-8 mt-3 mb-3">
+            <div class="flex justify-center items-center max-sm:flex-col">
+              <div class="w-1/2 pr-2 text-right max-sm:w-auto">
+                <h1 class="text-2xl font-bold text-center">Respect local customs and traditions.</h1>
+              </div>
+              <div class="w-1/2 pl-2 text-left max-sm:w-auto">
+                <p>Showing respect to the locals and their culture is important to avoid misunderstandings and unintientional disrespect. Taking some time
+                    to learn and adhere to local customs and traditions can also enhance your travel experience by allowing you to connect to the people
+                    and their way of life.</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="w-12/12 items-center text-black font-opensans text-base sm:text-lg md:flex-row bg-center bg-[rgba(255,255,255,0.65)] rounded-xl p-8 mt-3 mb-3">
+            <div class="flex justify-center items-center max-sm:flex-col">
+              <div class="w-1/2 pr-2 text-right max-sm:w-auto">
+                <h1 class="text-2xl font-bold text-center">Stay hydrated.</h1>
+              </div>
+              <div class="w-1/2 pl-2 text-left max-sm:w-auto">
+                <p>Staying hydrated is important especially on locations that are hot and humid. Always carry a water bottle with you and replenish lost fluids.</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="w-12/12 items-center text-white font-opensans text-base sm:text-lg md:flex-row bg-center bg-[rgba(0,0,0,0.65)] rounded-xl p-8 mt-3 mb-3">
+            <div class="flex justify-center items-center max-sm:flex-col">
+              <div class="w-1/2 pr-2 text-right max-sm:w-auto">
+                <h1 class="text-2xl font-bold text-center">Always bring cash.</h1>
+              </div>
+              <div class="w-1/2 pl-2 text-left max-sm:w-auto">
+                <p>While most urban areas accept credit cards, it's always a good idea to carry cash with you as some small shops and establishments only accept cash. 
+                    This may also save you when and error occurs for online banks, credit cards, etc.</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="w-12/12 items-center text-black font-opensans text-base sm:text-lg md:flex-row bg-center bg-[rgba(255,255,255,0.65)] rounded-xl p-8 mt-3 mb-3">
+            <div class="flex justify-center items-center max-sm:flex-col">
+              <div class="w-1/2 pr-2 text-right max-sm:w-auto">
+                <h1 class="text-2xl font-bold text-center">Be mindful of the weather.</h1>
+              </div>
+              <div class="w-1/2 pl-2 text-left max-sm:w-auto">
+                <p>The weather can be unpredictable. Make sure to check weather forecasts before heading out and plan accordingly. In relation
+                    to packing suitably, research in advance about the weather of your destination place. If it's hot and humid,
+                    pack light clothes, and if it's cold, pack thick clothes.
+                </p>
+              </div>
+            </div>
+        </div>
+
+        <div class="w-12/12 items-center text-white font-opensans text-base sm:text-lg md:flex-row bg-center bg-[rgba(0,0,0,0.65)] rounded-xl p-8 mt-3 mb-3">
+            <div class="flex justify-center items-center max-sm:flex-col">
+              <div class="w-1/2 pr-2 text-right max-sm:w-auto">
+                <h1 class="text-2xl font-bold text-center">Stay safe.</h1>
+              </div>
+              <div class="w-1/2 pl-2 text-left max-sm:w-auto">
+                <p>No matter where you're traveling, it is important to be vigilant and take precautions to be safe. Avoid carrying large amounts of cash or wearing 
+                    expensive jewelry. Also, avoid unfamiliar areas and always be aware of your surroundings.</p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer"></footer>
+
+        <!--scripts-->
+        <script>
+        // Burger menus
+            document.addEventListener('DOMContentLoaded', function() {
+                // open
+                const burger = document.querySelectorAll('.navbar-burger');
+                const menu = document.querySelectorAll('.navbar-menu');
+    
+                if (burger.length && menu.length) {
+                    for (var i = 0; i < burger.length; i++) {
+                        burger[i].addEventListener('click', function() {
+                            for (var j = 0; j < menu.length; j++) {
+                                menu[j].classList.toggle('hidden');
+                            }
+                        });
+                    }
+                }
+    
+                // close
+                const close = document.querySelectorAll('.navbar-close');
+                const backdrop = document.querySelectorAll('.navbar-backdrop');
+    
+                if (close.length) {
+                    for (var i = 0; i < close.length; i++) {
+                        close[i].addEventListener('click', function() {
+                            for (var j = 0; j < menu.length; j++) {
+                                menu[j].classList.toggle('hidden');
+                            }
+                        });
+                    }
+                }
+    
+                if (backdrop.length) {
+                    for (var i = 0; i < backdrop.length; i++) {
+                        backdrop[i].addEventListener('click', function() {
+                            for (var j = 0; j < menu.length; j++) {
+                                menu[j].classList.toggle('hidden');
+                            }
+                        });
+                    }
+                }
+            });
+        </script>
+</body>    
+</html> 
