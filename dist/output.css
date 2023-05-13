@@ -597,6 +597,14 @@ video {
   top: 7.5rem;
 }
 
+.top-\[7rem\] {
+  top: 7rem;
+}
+
+.top-\[7\.3rem\] {
+  top: 7.3rem;
+}
+
 .z-50 {
   z-index: 50;
 }
