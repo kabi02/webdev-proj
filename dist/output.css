@@ -794,6 +794,10 @@ video {
   height: auto;
 }
 
+.h-\[100dvh\] {
+  height: 100dvh;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1085,6 +1089,10 @@ video {
 
 .bg-cover {
   background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
 }
 
 .bg-center {
