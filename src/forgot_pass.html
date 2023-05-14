@@ -22,12 +22,11 @@
 </head>
 <body class="bg-[url('/assets/travelmate.jpg')] bg-cover sm:bg-fixed scroll-px-1">
 	<!--Main Sign in div-->
-    <div class="flex flex-col justify-center items-center h-screen max-[450px]:px-10">
+    <div class="flex flex-col justify-center items-center h-screen font-opensans max-[450px]:px-10">
         <img src="/assets/med-logo.png" class="pb-8" alt="">
-        <div class="w-96 px-6 py-6 shadow-lg bg-white rounded-2xl drop-shadow-2xl max-[450px]:w-full">
-            <a href="index.html"><i class="fa-solid fa-chevron-left"></i> Back</a>
-            <h1 class="text-3xl font-bold text-center block">Login</h1>
-
+        <div class="w-max px-6 py-6 shadow-lg bg-white rounded-2xl drop-shadow-2xl max-[450px]:w-full">
+            <h1 class="text-3xl font-bold text-center block">Forgot Your Password?</h1><br>
+            <p class="text-gray-400 px-6 text-center block">Kindly fill up the form below to reset your password.</p>
             <form action="#">
                 <div class="mt-12">
                     <label for="username">
@@ -37,23 +36,24 @@
                 </div>
                 <div class="mt-8">
                     <label for="password">
-                        <input type="password" id="password" placeholder="Password" required
+                        <input type="password" id="password" placeholder="New Password" required
+                        class="border-b-2 w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600">
+                    </label>
+                </div>
+                <div class="mt-8">
+                    <label for="password">
+                        <input type="password" id="confirm-password" placeholder="Confirm New Password" required
                         class="border-b-2 w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600">
                     </label>
                 </div>
 
-                <div class="mt-2 mb-2 text-right">
-                    <a href="forgot_pass.html" class="font-thin text-blue-600 dark:text-blue-500 hover:text-blue-300">Forgot Password?</a>
-                </div>
-
                 <div class="mt-12">
                     <button type="submit" class="border-none bg-black text-white text-base 
-                    h-10 w-full rounded-full hover:bg-gray-800 transition: duration-200">Login</button>
+                    h-10 w-full rounded-full hover:bg-gray-800 transition: duration-200">Reset Password</button>
                 </div>
                 
-                <div class="mt-2 mb-10">
-                    <p class="text-center text-gray-500 dark:text-gray-400">Not a member? 
-                    <a href="sign_up.html" class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-300">Sign up</a></p>
+                <div class="mt-2 mb-10 text-center">
+                    <a href="sign_in.html" class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-300">Back to Sign in</a>
                 </div>
             </form>
 	</div> 
