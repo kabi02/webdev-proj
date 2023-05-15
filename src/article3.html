@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="m-0 p-0 box-border scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--tailwindcss import-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--fontawesome import-->
+    <script src="https://kit.fontawesome.com/1231aac50b.js" crossorigin="anonymous"></script>
+    <title>TravelMates</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+	<!--fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+	integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <!-- importing footer -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/src/scripts/script.js"></script>
+</head>
+<body class="bg-yellow-300 bg-cover sm:bg-fixed scroll-px-1">
+    <!-- NAVBAR -->
+    <nav class="sticky inset-0 top-0 z-[1] px-5 sm:px-10 py-4 sm:py-5 md:py-6 lg:py-8 flex justify-between items-center bg-white">
+		<img src="/assets/med-logo.png" class="max-w-full" alt="">
+        <!-- Hamburger Icon -->
+		<div class="lg:hidden">
+			<button class="navbar-burger flex items-center text-black p-3">
+				<i class="fa-sharp fa-solid fa-bars sm:text-3xl text-xl" style="color: #000000;"></i>
+			</button>
+		</div>
+		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="index.html">Home</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="about.html">About</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="tips.html">Tips</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150" href="contact.html">Contact</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pl-5" href="blog.html">Blog</a></li>
+		</ul>
+		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm sm:text-base text-gray-900 font-bold rounded-xl transition duration-200 hover:bg-gray-100" href="sign_in.html">Sign In</a>
+		<a class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-500 text-sm sm:text-base text-white font-bold rounded-xl transition duration-200" href="sign_up.html">Sign up</a>
+	</nav>
+	<div class="navbar-menu relative z-50 hidden">
+		<div class="navbar-backdrop fixed inset-0 bg-black opacity-60"></div>
+		<!-- Phone nav -->
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-3/5 md:w-6/12 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-8">
+                <button class="navbar-close">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Hidden -->
+            <div>
+                <ul>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-house mr-2 sm:mr-4 "></i>
+                            <a class="" href="index.html">Home</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-circle-info mr-2 sm:mr-4 "></i>
+                            <a class="" href="about.html">About</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-list-check mr-2 sm:mr-4 "></i>
+                            <a class="" href="tips.html">Tips</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-envelope mr-2 sm:mr-4"></i>
+                            <a class="" href="contact.html">Contact</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2">
+                            <i class="fa-solid fa-globe mr-2 sm:mr-4"></i>
+                            <a class="" href="blog.html">Blog</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-auto">
+                <div class="pt-6">
+                    <a class="block px-4 py-3 mb-3 leading-none text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl" href="sign_in.html">Sign in</a>
+                    <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-black hover:bg-gray-500 rounded-xl" href="sign_up.html">Sign Up</a>
+                </div>
+                <p class="my-4 text-xs text-center text-gray-400">
+                    <span class="font-opensans">TravelMates © 2023</span>
+                </p>
+            </div>
+        </nav>
+	</div>
+    <!-- main div -->
+    <div class="flex justify-center font-opensans px-40 py-10 gap-3 max-xl:px-10 max-lg:flex-col max-md:px-8 max-sm:px-5 max-[400px]:px-2">
+        <div class="bg-white px-10 pt-6 text-justify w-[70%] rounded-md max-lg:w-full max-[400px]:px-5">
+            <div class="text-left w-max font-semibold cursor-pointer sm:text-base text-sm transition duration-300 hover:text-gray-400"><a href="javascript:history.back()"><i class="fa-solid fa-chevron-left"></i> Go back</div></a>
+            <h1 class="font-opensans font-extrabold text-[48px] text-gray-800 max-[400px]:text-[36px]">Intramuros</h1>
+            <p class="font-opensans text-gray-500">by TravelMates</p><br>
+            <div class="h-[2px] w-full bg-gray-200 rounded-lg"></div><br>
+            <img src="https://a.cdn-hotels.com/gdcs/production16/d15/70589415-4617-4205-804f-210fbb296933.jpg?impolicy=fcrop&w=1600&h=1066&q=medium" class="w-[100%] block" alt="">
+            <br>
+            <p> Intramuros, a historic district of Manila, is a testament to the city's rich cultural heritage. Constructed by the Spanish colonizers in 1571, it stands as one of the oldest districts in the area. This magnificent fortress boasts moats and walls that surround its 51 blocks and 7 fortified gateways. This location boasts an impressive array of amenities, including hospitals, military barracks, residential buildings, schools, a dozen churches, and even the Governor's Palace. Throughout history, this structure has withstood and repelled countless attacks.<br><br>
+                Intramuros, the historic district of Manila, stands out as a remarkable example of preserving the Spanish colonial architecture and ambiance. The district's churches and streets have remained untouched by modernisation, providing visitors with a glimpse into the city's rich cultural heritage. The preservation efforts of the Tourist Authority have paid off, as they have managed to save a significant piece of history that would have otherwise been lost forever. This has resulted in the destination becoming one of the most popular tourist spots in the Philippines.<br><br>            
+            <div class="flex flex-col items-center mb-4"><img src="https://sgp1.digitaloceanspaces.com/tz-mag-ph/wp-content/uploads/2023/02/040402024444/Manila-Cathedral-768x480.jpg" class="w-[100%] block" alt="intramuros-place"> <small class="text-gray-400 text-center">Credits: TripZilla.ph (Anton Fratila’s Images via Canva Pro) </small></div>
+            If you're planning a trip to Intramuros, don't miss out on visiting two of its most iconic landmarks - the Manila Cathedral and San Agustin Church. These tourist spots hold great historical and cultural significance, and are definitely worth checking out.<br><br> 
+            The Manila Cathedral is a significant landmark as it serves as the primary church of the Roman Catholic Archdiocese of Manila. Throughout its long history since its establishment in 1581, the cathedral has undergone several renovations and restorations to maintain its grandeur.<br><br> 
+            San Agustin Church, the oldest stone church in the Philippines, holds a significant place in the country's history. It was consecrated in 1607 and has stood the test of time, serving as a testament to the country's rich cultural heritage. The Spanish Baroque style of this place is truly remarkable, featuring Trompe-l'oeil ceilings and a grand altar that earned it the prestigious title of a UNESCO World Heritage Site back in 1993.<br><br>
+
+            <div class="flex flex-col items-center mb-4"><img src="/assets/imgs/articles/intramuros/Intramurosfood.png" class="w-[100%] block" alt="intramuros-place"> <small class="text-gray-400 text-center">Credits: Illustrado Restaurant, the Philippine Department of Tourism, Knorr</small></div>
+            If you're looking for a unique food experience in Manila, look no further than Intramuros. This historic destination not only offers traditional Filipino cuisine but also immerses you in the local culture.  Ilustrado is a must-visit destination for those who want to experience the charm of Old Manila. This beautifully restored Spanish-era house is famous for its unique take on the classic Filipino dish, adobo. One of my favorite dishes to indulge in is Adobong Bagnet and Prawns with Taba ng Talangka. This delectable meal consists of succulent pork belly that has been simmered in a blend of six spices and savory sauce, which is then mixed with rich and flavorful crab fat. The result is a tender and mouth-watering dish that is sure to satisfy any foodie's cravings.<br><br>
+            Intramuros boasts a variety of restaurants for food enthusiasts to explore. This restaurant boasts a diverse menu featuring Spanish, Italian, and regional cuisine, along with global influences such as wood-fired pizzas, pasta, and sandwiches. The Bayleaf boasts of a number of dining options, including the renowned 9 Spoons restaurant. The Sky Deck, situated on the topmost floor of the hotel, provides a breathtaking panoramic view of Manila from every angle.<br><br>
+            If you're looking for a delicious meal that will satisfy your cravings any time of day, look no further than The Bayleaf's menu. You can indulge in their famous Bayleaf Tapa served with garlic rice and eggs, or try their mouth-watering Kare-kare. And don't forget to save room for dessert - their Ensaymada Pudding with crème anglaise and mango balls is a must-try!<br><br>
+                                
+            <div class="flex flex-col items-center mb-4"><img src="https://a.cdn-hotels.com/gdcs/production163/d461/3a94f6e8-cbb6-4de4-8438-e130dd65f78c.jpg?impolicy=fcrop&w=1600&h=1066&q=medium" class="w-[100%] block" alt="intramuros-place"> <small class="text-gray-400 text-center">Credits: hotels.com</small></div>
+                Intramuros boasts several significant tourist destinations, including the Baluarte de San Diego, Fort Santiago, and Palacia del Gobernador ruins. Baluarte de San Diego, a historical fortification, served as a crucial defense against potential threats from the south. However, its demolition was necessary to prevent any further damage to its foundations. Fort Santiago, a historical landmark in the Philippines, served as a repository for valuable spices and metals in the past. Today, it stands as a revered monument honoring the life and legacy of Jose Rizal.<br><br> 
+                If you're a history buff, you won't want to miss Palacia del Gobernador and Casa Manila in Intramuros. The former is a fascinating relic from the Spanish Occupation, while the latter is a stunning example of opulent Spanish architecture. Casa Manila is a must-visit destination for history buffs and culture enthusiasts alike.<br><br>
+            
+            <div class="flex flex-col items-center mb-4"><img src="https://sgp1.digitaloceanspaces.com/tz-mag-ph/wp-content/uploads/2023/02/040402024242/Jones-Bridge-768x480.jpg" class="w-[100%] block" alt="intramuros-place"> <small class="text-gray-400 text-center">Credits: TripZilla.ph</small></div>
+            This historic city boasts a luxurious living room, as well as the renowned heritage restaurant Barbara's. Visitors can also explore the National Commission of Culture and Arts, Binondo-Intramuros Bridge, Jones Bridge, and National Museum Complex.<br><br>
+
+            The Binondo-Intramuros Bridge and Jones Bridge are two iconic structures that connect the historic districts of Manila. The Binondo-Intramuros Bridge boasts modern architecture, while the Jones Bridge has a rich history dating back to the American Occupation in the 1920s and was recently restored in 2019. The National Museum Complex is a must-visit destination for anyone interested in exploring the rich cultural heritage of our country. It comprises of four magnificent buildings, namely the National Museum of Anthropology, the National Museum of Fine Arts, and the National Museum of Natural History.
+            
+            Each of these museums is a treasure trove of knowledge and offers a unique perspective on the diverse aspects of our history and culture.<br><br> 
+            If you're looking for a tour destination that's both culturally significant and breathtakingly beautiful, look no further than Intramuros.This historic walled city is a must-visit for anyone interested in immersing themselves in the rich history and timeless charm of the Philippines.<br><br>            
+        </div>
+        <div class="sticky top-[7.3rem] text-left h-max w-[40%] max-lg:w-full max-lg:relative max-lg:top-auto">
+            <div class="bg-white p-5 rounded-md font-opensans mb-3">
+                <h1 class="font-opensans font-extrabold text-[24px] text-gray-800">Food</h1>
+                <ul class="list-disc font-opensans font-medium px-5">
+                    <li>Adobong Bagnet</li>
+                    <li>Sinigang na Crispy Pata</li>
+                    <li>Prawns with Taba ng Talangka</li>
+                    <li>Tuna Belly</li>
+                    <li>Sampaguita Ice cream</li>
+                    <li>Ensaymada Pudding</li>
+                    <li>Bulalo</li>
+                </ul>            
+            </div>
+            <div class="bg-white p-5 rounded-md font-opensans mb-3">
+                <h1 class="font-opensans font-extrabold text-[24px] text-gray-800">Famous Spots</h1>
+                <ul class="list-disc font-opensans font-medium px-5">
+                    <li>Manila Cathedral</li>
+                    <li>San Agustin Church</li>
+                    <li>Fort Santiago</li>
+                    <li>Baluarte de San Diego</li>
+                    <li>Palacia del Gobernador</li>
+                    <li>Casa Manila</li>
+                    <li>Binondo-Intramuros Bridge</li>  
+                    <li>Jones Bridge</li>
+                    <li>National Museum Complex.</li>
+                    <li>National Commission of Culture and Arts</li>
+                </ul>
+            </div>
+            <div class="bg-white px-3 rounded-md font-opensans pb-1">
+                <h1 class="font-extrabold text-[24px] text-gray-800">Comments</h1>
+                <div class="relative my-2">
+                    <div class="absolute inset-y-0 left-0 flex pl-3 pt-2.5 pointer-events-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"/></svg>
+                    </div>
+                    <textarea id="subject" name="message" autocomplete="off" rows="5" cols="50" class="cursor-not-allowed bg-[#D9D9D9] resize-none border border-gray-300 text-[#808080] focus:text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" 
+                    placeholder="You must be logged in to post a comment... " disabled></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+
+    </footer>
+
+	<!--scripts-->
+	<script>
+        // Burger menus
+        document.addEventListener('DOMContentLoaded', function() {
+            // open
+            const burger = document.querySelectorAll('.navbar-burger');
+            const menu = document.querySelectorAll('.navbar-menu');
+        
+            if (burger.length && menu.length) {
+                for (var i = 0; i < burger.length; i++) {
+                    burger[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        
+            // close
+            const close = document.querySelectorAll('.navbar-close');
+            const backdrop = document.querySelectorAll('.navbar-backdrop');
+        
+            if (close.length) {
+                for (var i = 0; i < close.length; i++) {
+                    close[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        
+            if (backdrop.length) {
+                for (var i = 0; i < backdrop.length; i++) {
+                    backdrop[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        });
+        </script>
+</body> 
+</html> 

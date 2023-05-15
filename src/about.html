@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="m-0 p-0 box-border scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--tailwindcss import-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--fontawesome import-->
+    <script src="https://kit.fontawesome.com/1231aac50b.js" crossorigin="anonymous"></script>
+    <title>TravelMates</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+	<!--fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+	integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <!-- importing footer -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/src/scripts/script.js"></script>
+</head>
+<body class="bg-[url('/assets/travelmate.jpg')] bg-cover sm:bg-fixed scroll-px-1">
+    <!-- NAVBAR -->
+    <nav class="relative px-5 sm:px-10 py-4 sm:py-5 md:py-6 lg:py-8 flex justify-between items-center bg-white">
+		<img src="/assets/med-logo.png" class="max-w-full" alt="">
+        <!-- Hamburger Icon -->
+		<div class="lg:hidden">
+			<button class="navbar-burger flex items-center text-black p-3">
+				<i class="fa-sharp fa-solid fa-bars sm:text-3xl text-xl" style="color: #000000;"></i>
+			</button>
+		</div>
+		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="index.html">Home</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="#">ABOUT</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="tips.html">Tips</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150" href="contact.html">Contact</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pl-5" href="blog.html">Blog</a></li>
+		</ul>
+		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm sm:text-base text-gray-900 font-bold rounded-xl transition duration-200 hover:bg-gray-100" href="sign_in.html">Sign In</a>
+		<a class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-500 text-sm sm:text-base text-white font-bold rounded-xl transition duration-200" href="sign_up.html">Sign up</a>
+	</nav>
+	<div class="navbar-menu relative z-50 hidden">
+		<div class="navbar-backdrop fixed inset-0 bg-black opacity-60"></div>
+		<!-- Phone nav -->
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-3/5 md:w-6/12 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-8">
+                <button class="navbar-close">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Hidden -->
+            <div>
+                <ul>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-house mr-2 sm:mr-4 "></i>
+                            <a class="" href="index.html">Home</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-circle-info mr-2 sm:mr-4 "></i>
+                            <a class="" href="about.html">About</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-list-check mr-2 sm:mr-4 "></i>
+                            <a class="" href="tips.html">Tips</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-envelope mr-2 sm:mr-4 "></i>
+                            <a class="" href="contact.html">Contact</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-globe mr-2 sm:mr-4 "></i>
+                            <a class="" href="blog.html">Blog</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-auto">
+                <div class="pt-6">
+                    <a class="block px-4 py-3 mb-3 leading-none text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl" href="sign_in.html">Sign in</a>
+                    <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-black hover:bg-gray-500 rounded-xl" href="sign_up.html">Sign Up</a>
+                </div>
+                <p class="my-4 text-xs text-center text-gray-400">
+                    <span class="font-opensans">TravelMates © 2023</span>
+                </p>
+            </div>
+        </nav>
+	</div>
+
+    <!-- CONTENT -->
+    <h1 class="text-center text-[40px] sm:text-[70px] md:text-[100px] font-extrabold py-3">ABOUT</h1>
+    <div>
+        <!-- Welcome -->
+        <div class="w-full bg-white flex flex-col min-[1000px]:flex-row justify-between items-center space-x-3 sm:px-12 min-[1000px]:px-28 p-8 sm:py-14 min-[1000px]:py-20">
+            <div class="min-[1000px]:w-1/2 w-full">
+                <h2 class="font-extrabold text-[20px] sm:text-[30px] md:text-[40px] mb-5">Welcome to our travel blog!</h2>
+                <p class="text-justify">Our goal is to showcase the best of the Philippines and help you plan your dream trip to this tropical paradise. We believe that the Philippines is a hidden gem that deserves more attention from travelers all over the world. From its stunning beaches and crystal-clear waters to its vibrant culture and friendly locals, the Philippines has something for everyone.</p>
+            </div>
+            <img class="min-[1000px]:w-1/3 w-full" src="/assets/imgs/about/pic1.png">            
+        </div>
+
+        <!-- Mission -->
+        <div class="w-full bg-[rgba(254,254,254,0.9)] flex flex-col sm:px-12 md:px-28">
+            <div class="flex flex-col md:flex-row justify-between items-center space-x-3 p-8 sm:py-14 md:py-20">
+                <div class="md:w-1/2 w-full">
+                    <h2 class="font-extrabold text-[20px] sm:text-[30px] md:text-[40px] mb-5">Mission</h2>
+                    <p class="text-justify">Our blog is dedicated to providing you with useful information and insights about the Philippines. We've explored the country extensively and have curated a collection of the best travel tips, recommendations, and hidden gems that you won't find anywhere else. Whether you're looking for a romantic getaway, an adventure-filled vacation, or a family-friendly trip, we've got you covered</p>
+                </div>
+                <div class="grid grid-cols-2 md:gap-10 min-[304px]:gap-14 gap-5 min-[1140px]:pr-32 md:mt-0 mt-9">
+                    <div class="flex flex-col font-extralight">
+                        <span class="text-[25px] min-[304px]:text-[35px] text-[#2D4E74]">7, 641</span>
+                        <small class="text-center">ISLANDS</small>
+                    </div>
+                    <div class="flex flex-col font-extralight">
+                        <span class="text-[25px] min-[304px]:text-[35px] text-[#2D4E74]">3, 142</span>
+                        <small class="text-center">MOUNTAINS</small>
+                    </div>
+                    <div class="flex flex-col font-extralight">
+                        <span class="text-[25px] min-[304px]:text-[35px] text-[#2D4E74]">36,289</span>
+                        <small class="text-center">BEACHES</small>
+                    </div>
+                    <div class="flex flex-col font-extralight">
+                        <span class="text-[25px] min-[304px]:text-[35px] text-[#2D4E74]">3, 100</span>
+                        <small class="text-center">CAVES</small>
+                    </div>
+                </div>          
+            </div>
+            <img src="/assets/imgs/about/pic2.png" class="w-full">
+
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer id="footer"></footer>
+
+
+
+	<!--scripts-->
+	<script>
+        // Burger menus
+        document.addEventListener('DOMContentLoaded', function() {
+            // open
+            const burger = document.querySelectorAll('.navbar-burger');
+            const menu = document.querySelectorAll('.navbar-menu');
+        
+            if (burger.length && menu.length) {
+                for (var i = 0; i < burger.length; i++) {
+                    burger[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        
+            // close
+            const close = document.querySelectorAll('.navbar-close');
+            const backdrop = document.querySelectorAll('.navbar-backdrop');
+        
+            if (close.length) {
+                for (var i = 0; i < close.length; i++) {
+                    close[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        
+            if (backdrop.length) {
+                for (var i = 0; i < backdrop.length; i++) {
+                    backdrop[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        });
+        </script>
+</body> 
+</html> 
