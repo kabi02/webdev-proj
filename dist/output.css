@@ -1768,6 +1768,30 @@ video {
   }
 }
 
+@media (max-width: 300px) {
+  .max-\[300px\]\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .max-\[300px\]\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .max-\[300px\]\:text-left {
+    text-align: left;
+  }
+
+  .max-\[300px\]\:text-\[24px\] {
+    font-size: 24px;
+  }
+
+  .max-\[300px\]\:text-\[36px\] {
+    font-size: 36px;
+  }
+}
+
 @media (min-width: 304px) {
   .min-\[304px\]\:gap-14 {
     gap: 3.5rem;
