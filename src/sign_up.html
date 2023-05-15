@@ -21,17 +21,17 @@
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-[url('/assets/travelmate.jpg')] bg-cover sm:bg-fixed scroll-px-1">
+<body class="bg-[url('/assets/travelmate.jpg')] pb-8 bg-cover sm:bg-fixed scroll-px-1">
 	<!--Main Sign up div-->
-    <div class="flex flex-col justify-center items-center h-full py-8">
-        <img src="/assets/med-logo.png" class="pb-8" alt="">
+    <div class="flex flex-col justify-center items-center h-full max-[450px]:px-10">
+        <img src="/assets/med-logo.png" class="py-8" alt="">
 
-                <form class="bg-white w-2/3 px-16 py-3 shadow-lg rounded-2xl">
+                <form class="bg-white w-2/3 px-16 py-3 shadow-lg rounded-2xl max-[450px]:w-full">
                     <div>
                         <h1 class="mt-4 text-3xl font-bold text-left">Create an Account</h1>
                         <div class="mb-6">
                             <p>Already have an account? 
-                            <a href="sign_in.html" class="text-blue-600 hover:text-blue-300">Login here</a></p>
+                            <a href="sign_in.html" class="text-blue-600 transition duration-300 hover:text-blue-300">Login here</a></p>
                         </div>
                     </div>
                     <div class="grid gap-3 md:grid-cols-3 mb-6">
@@ -92,7 +92,7 @@
                         <div class="flex items-center h-5">
                         <input id="remember" type="checkbox" value="" required class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" >
                         </div>
-                        <label for="remember" class="ml-2 text-sm font-medium text-gray-900">I agree with the <a href="#" class="text-blue-600 hover:underline">terms and conditions</a>.</label>
+                        <label for="remember" class="ml-2 text-sm font-medium text-gray-900">I hereby declare that all the information I provided are correct.</label>
                     </div>
                     <button type="submit" class="mb-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
                 </form>

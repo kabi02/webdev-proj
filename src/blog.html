@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="m-0 p-0 box-border scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--tailwindcss import-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--fontawesome import-->
+    <script
+      src="https://kit.fontawesome.com/1231aac50b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>TravelMates</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- importing footer -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/src/scripts/script.js"></script>
+  </head>
+  <body
+    class="bg-[url('/assets/travelmate.jpg')] bg-cover sm:bg-fixed scroll-px-1"
+  >
+    <!-- NAVBAR -->
+    <nav
+      class="relative px-5 sm:px-10 py-4 sm:py-5 md:py-6 lg:py-8 flex justify-between items-center bg-white"
+    >
+      <img src="/assets/med-logo.png" class="max-w-full" alt="" />
+      <!-- Hamburger Icon -->
+      <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-black p-3">
+          <i
+            class="fa-sharp fa-solid fa-bars sm:text-3xl text-xl"
+            style="color: #000000"
+          ></i>
+        </button>
+      </div>
+      <ul
+        class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6"
+      >
+        <li>
+          <a
+            class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5"
+            href="index.html"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5"
+            href="about.html"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5"
+            href="tips.html"
+            >Tips</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150"
+            href="contact.html"
+            >Contact</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pl-5"
+            href="blog.html"
+            >BLOG</a
+          >
+        </li>
+      </ul>
+      <a
+        class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm sm:text-base text-gray-900 font-bold rounded-xl transition duration-200 hover:bg-gray-100"
+        href="sign_in.html"
+        >Sign In</a
+      >
+      <a
+        class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-500 text-sm sm:text-base text-white font-bold rounded-xl transition duration-200"
+        href="sign_up.html"
+        >Sign up</a
+      >
+    </nav>
+    <div class="navbar-menu relative z-50 hidden">
+      <div class="navbar-backdrop fixed inset-0 bg-black opacity-60"></div>
+      <!-- Phone nav -->
+      <nav
+        class="fixed top-0 left-0 bottom-0 flex flex-col w-3/5 md:w-6/12 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
+      >
+        <div class="flex items-center mb-8">
+          <button class="navbar-close">
+            <svg
+              class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Hidden -->
+        <div>
+          <ul>
+            <li
+              class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-gray-100 hover:text-black rounded border-b-2"
+            >
+              <div class="sm:w-1/2">
+                <i class="fa-solid fa-house mr-2 sm:mr-4"></i>
+                <a class="" href="index.html">Home</a>
+              </div>
+              <div class="text-right sm:w-1/2">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </li>
+            <li
+              class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-gray-100 hover:text-black rounded border-b-2"
+            >
+              <div class="sm:w-1/2">
+                <i class="fa-solid fa-circle-info mr-2 sm:mr-4"></i>
+                <a class="" href="about.html">About</a>
+              </div>
+              <div class="text-right sm:w-1/2">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </li>
+            <li
+              class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-gray-100 hover:text-black rounded border-b-2"
+            >
+              <div class="sm:w-1/2">
+                <i class="fa-solid fa-list-check mr-2 sm:mr-4"></i>
+                <a class="" href="tips.html">Tips</a>
+              </div>
+              <div class="text-right sm:w-1/2">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </li>
+            <li
+              class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-gray-100 hover:text-black rounded border-b-2"
+            >
+              <div class="sm:w-1/2">
+                <i class="fa-solid fa-envelope mr-2 sm:mr-4"></i>
+                <a class="" href="contact.html">Contact</a>
+              </div>
+              <div class="text-right sm:w-1/2">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </li>
+
+            <li
+              class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-gray-100 hover:text-black rounded border-b-2"
+            >
+              <div class="sm:w-1/2">
+                <i class="fa-solid fa-globe mr-2 sm:mr-4"></i>
+                <a class="" href="blog.html">Blog</a>
+              </div>
+              <div class="text-right sm:w-1/2">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-auto">
+          <div class="pt-6">
+            <a
+              class="block px-4 py-3 mb-3 leading-none text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl"
+              href="sign_in.html"
+              >Sign in</a
+            >
+            <a
+              class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-black hover:bg-gray-500 rounded-xl"
+              href="sign_up.html"
+              >Sign Up</a
+            >
+          </div>
+          <p class="my-4 text-xs text-center text-gray-400">
+            <span class="font-opensans">TravelMates © 2023</span>
+          </p>
+        </div>
+      </nav>
+    </div>
+
+    <!-- BLOG -->
+    <div class="px-10 py-6 max-[400px]:px-5 max-[400px]:py-2">
+      <div
+        class="w-12/12 items-center text-white font-opensans text-base sm:text-lg md:flex-row bg-center bg-[rgba(0,0,0,0.65)] rounded-xl p-8 mt-3 mb-3"
+      >
+        <div class="flex justify-center items-center max-[700px]:flex-col">
+          <div
+            class="w-1/5 pr-2 max-[700px]:w-auto max-[700px]:pr-0 max-lg:w-1/2"
+          >
+            <img
+              src="/assets/imgs/blog/wpalawan.png"
+              alt="Palawan"
+              class="mx-auto rounded-lg h-auto"
+            />
+          </div>
+          <div class="w-4/5 pl-2 text-left max-[700px]:w-auto max-[700px]:pl-0">
+            <h3
+              class="text-2xl font-bold md:inline-block max-[700px]:text-center"
+            >
+              Palawan
+            </h3>
+            <p class="text-justify">
+              Discover the world-renowned destination of Palawan! Immerse
+              yourself in breathtaking land and seascapes that offer
+              unparalleled cultural, adventure, and nature experiences.
+              Experience the ultimate adventure by immersing yourself in
+              trekking through picturesque hills, valleys, and rivers. Get ready
+              to explore the pristine waters through snorkeling and diving. Come
+              and discover the beauty of nature like never before!
+            </p>
+            <span
+              class="text-left inline-block align-middle font-semibold cursor-pointer sm:text-base text-sm transition duration-300 text-yellow-500 hover:text-yellow-700"
+            >
+              <a href="article1.html">See More <i class="fa-solid fa-chevron-right"></i></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-12/12 items-center text-black font-opensans text-base sm:text-lg md:flex-row bg-center bg-[rgba(255,255,255,0.65)] rounded-xl p-8 mt-3 mb-3"
+      >
+        <div class="flex justify-center items-center max-[700px]:flex-col">
+          <div
+            class="w-1/5 pr-2 max-[700px]:w-auto max-[700px]:pr-0 max-lg:w-1/2"
+          >
+            <img
+              src="/assets/imgs/blog/wvigan.png"
+              alt="Vigan"
+              class="mx-auto rounded-lg h-auto"
+            />
+          </div>
+          <div class="w-4/5 pl-2 text-left max-[700px]:w-auto max-[700px]:pl-0">
+            <h3
+              class="text-2xl font-bold md:inline-block max-[700px]:text-center"
+            >
+              Vigan
+            </h3>
+            <p class="text-justify">
+              Are you looking for a destination that offers a perfect mix of
+              history, culture, and natural beauty? Look no further than Vigan,
+              a city located in the province of Ilocos Sur, Philippines. Vigan
+              is known for its well-preserved Spanish colonial architecture,
+              delicious cuisine, and rich heritage. In this ultimate travel
+              guide, we'll uncover the best of Vigan and why it should be on
+              every traveler's bucket list.
+            </p>
+            <span
+              class="text-left inline-block align-middle font-semibold cursor-pointer sm:text-base text-sm transition duration-300 text-yellow-500 hover:text-yellow-700"
+            >
+            <a href="article2.html">See More <i class="fa-solid fa-chevron-right"></i></a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-12/12 items-center text-white font-opensans text-base sm:text-lg md:flex-row bg-center bg-[rgba(0,0,0,0.65)] rounded-xl p-8 mt-3 mb-3"
+      >
+        <div class="flex justify-center items-center max-[700px]:flex-col">
+          <div
+            class="w-1/5 pr-2 max-[700px]:w-auto max-[700px]:pr-0 max-lg:w-1/2"
+          >
+            <img
+              src="/assets/imgs/blog/wintramuros.png"
+              alt="Intramuros"
+              class="mx-auto rounded-lg h-auto"
+            />
+          </div>
+          <div class="w-4/5 pl-2 text-left max-[700px]:w-auto max-[700px]:pl-0">
+            <h3
+              class="text-2xl font-bold md:inline-block max-[700px]:text-center"
+            >
+              Intramuros
+            </h3>
+            <p class="text-justify">
+              Intramuros, a historic district of Manila, is a testament to the
+              city's rich cultural heritage. Constructed by the Spanish
+              colonizers in 1571, it stands as one of the oldest districts in
+              the area. This magnificent fortress boasts moats and walls that
+              surround its 51 blocks and 7 fortified gateways. This location
+              boasts an impressive array of amenities, including hospitals,
+              military barracks, residential buildings, schools, a dozen
+              churches, and even the Governor's Palace. Throughout history, this
+              structure has withstood and repelled countless attacks.
+            </p>
+            <span
+              class="text-left inline-block align-middle font-semibold cursor-pointer sm:text-base text-sm transition duration-300 text-yellow-500 hover:text-yellow-700"
+            >
+            <a href="article3.html">See More <i class="fa-solid fa-chevron-right"></i></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer"></footer>
+
+    <!--scripts-->
+    <script>
+      // Burger menus
+      document.addEventListener("DOMContentLoaded", function () {
+        // open
+        const burger = document.querySelectorAll(".navbar-burger");
+        const menu = document.querySelectorAll(".navbar-menu");
+
+        if (burger.length && menu.length) {
+          for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+
+        // close
+        const close = document.querySelectorAll(".navbar-close");
+        const backdrop = document.querySelectorAll(".navbar-backdrop");
+
+        if (close.length) {
+          for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+
+        if (backdrop.length) {
+          for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
