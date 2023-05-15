@@ -1706,6 +1706,10 @@ video {
     padding-right: 0px;
   }
 
+  .max-\[700px\]\:pl-0 {
+    padding-left: 0px;
+  }
+
   .max-\[700px\]\:text-center {
     text-align: center;
   }
