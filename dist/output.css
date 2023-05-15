@@ -1687,6 +1687,36 @@ video {
   }
 }
 
+@media (max-width: 745px) {
+  .max-\[745px\]\:flex-col {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .max-\[700px\]\:w-auto {
+    width: auto;
+  }
+
+  .max-\[700px\]\:flex-col {
+    flex-direction: column;
+  }
+
+  .max-\[700px\]\:pr-0 {
+    padding-right: 0px;
+  }
+
+  .max-\[700px\]\:text-center {
+    text-align: center;
+  }
+}
+
+@media (max-width: 648px) {
+  .max-\[648px\]\:flex-col {
+    flex-direction: column;
+  }
+}
+
 @media not all and (min-width: 640px) {
   .max-sm\:w-auto {
     width: auto;
