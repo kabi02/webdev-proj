@@ -1642,8 +1642,16 @@ video {
     top: auto;
   }
 
+  .max-lg\:inline-block {
+    display: inline-block;
+  }
+
   .max-lg\:w-full {
     width: 100%;
+  }
+
+  .max-lg\:w-1\/2 {
+    width: 50%;
   }
 
   .max-lg\:flex-col {
@@ -1657,6 +1665,22 @@ video {
 }
 
 @media not all and (min-width: 768px) {
+  .max-md\:absolute {
+    position: absolute;
+  }
+
+  .max-md\:relative {
+    position: relative;
+  }
+
+  .max-md\:top-0 {
+    top: 0px;
+  }
+
+  .max-md\:w-1\/2 {
+    width: 50%;
+  }
+
   .max-md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
