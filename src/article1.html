@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="m-0 p-0 box-border scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--tailwindcss import-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--fontawesome import-->
+    <script src="https://kit.fontawesome.com/1231aac50b.js" crossorigin="anonymous"></script>
+    <title>TravelMates</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+	<!--fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+	integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <!-- importing footer -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/src/scripts/script.js"></script>
+</head>
+<body class="bg-yellow-300 bg-cover sm:bg-fixed scroll-px-1">
+    <!-- NAVBAR -->
+    <nav class="sticky inset-0 top-0 z-[1] px-5 sm:px-10 py-4 sm:py-5 md:py-6 lg:py-8 flex justify-between items-center bg-white">
+		<img src="/assets/med-logo.png" class="max-w-full" alt="">
+        <!-- Hamburger Icon -->
+		<div class="lg:hidden">
+			<button class="navbar-burger flex items-center text-black p-3">
+				<i class="fa-sharp fa-solid fa-bars sm:text-3xl text-xl" style="color: #000000;"></i>
+			</button>
+		</div>
+		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="index.html">Home</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="about.html">About</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pr-5" href="tips.html">Tips</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150" href="contact.html">Contact</a></li>
+			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pl-5" href="blog.html">Blog</a></li>
+		</ul>
+		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm sm:text-base text-gray-900 font-bold rounded-xl transition duration-200 hover:bg-gray-100" href="sign_in.html">Sign In</a>
+		<a class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-500 text-sm sm:text-base text-white font-bold rounded-xl transition duration-200" href="sign_up.html">Sign up</a>
+	</nav>
+	<div class="navbar-menu relative z-50 hidden">
+		<div class="navbar-backdrop fixed inset-0 bg-black opacity-60"></div>
+		<!-- Phone nav -->
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-3/5 md:w-6/12 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-8">
+                <button class="navbar-close">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Hidden -->
+            <div>
+                <ul>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400 hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-house mr-2 sm:mr-4 "></i>
+                            <a class="" href="index.html">Home</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-circle-info mr-2 sm:mr-4 "></i>
+                            <a class="" href="about.html">About</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-list-check mr-2 sm:mr-4 "></i>
+                            <a class="" href="tips.html">Tips</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2 ">
+                            <i class="fa-solid fa-envelope mr-2 sm:mr-4"></i>
+                            <a class="" href="contact.html">Contact</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                    
+                    <li class="mb-1 flex justify-between p-4 text-xs sm:text-sm font-semibold text-gray-400  hover:bg-gray-100 hover:text-black rounded border-b-2">
+                        <div class="sm:w-1/2">
+                            <i class="fa-solid fa-globe mr-2 sm:mr-4"></i>
+                            <a class="" href="blog.html">Blog</a>
+                        </div>
+                        <div class="text-right sm:w-1/2 ">
+                            <i class="fa-solid fa-chevron-right"></i> 
+                        </div>                           
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-auto">
+                <div class="pt-6">
+                    <a class="block px-4 py-3 mb-3 leading-none text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl" href="sign_in.html">Sign in</a>
+                    <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-black hover:bg-gray-500 rounded-xl" href="sign_up.html">Sign Up</a>
+                </div>
+                <p class="my-4 text-xs text-center text-gray-400">
+                    <span class="font-opensans">TravelMates © 2023</span>
+                </p>
+            </div>
+        </nav>
+	</div>
+    <!-- main div -->
+    <div class="flex justify-center font-opensans px-40 py-10 gap-3 max-xl:px-10 max-lg:flex-col max-md:px-8 max-sm:px-5">
+        <div class="bg-white px-10 pt-6 text-justify w-[70%] rounded-md max-lg:w-full max-[400px]:px-5">
+            <div class="text-left w-max font-semibold cursor-pointer sm:text-base text-sm transition duration-300 hover:text-gray-400"><a href="javascript:history.back()"><i class="fa-solid fa-chevron-left"></i> Go back</div></a>
+            <h1 class="font-opensans font-extrabold text-[48px] text-gray-800 max-[400px]:text-[36px]">Palawan</h1>
+            <p class="font-opensans text-gray-500">by TravelMates</p><br>
+            <div class="h-[2px] w-full bg-gray-200 rounded-lg"></div><br>
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/e7/b0/ea/photo0jpg.jpg?w=700&h=500&s=1" class="w-[100%] block" alt="">
+            <br>
+            <p> Discover the world-renowned destination of Palawan! Immerse yourself in breathtaking land and seascapes that offer unparalleled cultural, adventure, and nature experiences. Experience the ultimate adventure by immersing yourself in trekking through picturesque hills, valleys, and rivers. Get ready to explore the pristine waters through snorkeling and diving. Come and discover the beauty of nature like never before! <br><br></p>            
+            <div class="flex flex-col items-center mb-4"><img src="/assets/imgs/articles/palawan/palawanfood.png" class="w-[100%] block" alt="palawan-place"> <small class="text-gray-400 text-center">Credits: @aviatourstravelservices, @chuckiequevenco, @tatangspalawan, @febelynevidor</small></div>
+                Palawan's cuisine is a fascinating fusion of diverse cultural influences, including Austronesian, Spanish, Chinese, Malay, and American. If you're a foodie, then you'll definitely want to visit this place. It's famous for its mouth-watering local specialties like Sisig and Lechon, as well as refreshing treats like Halo Halo and Badjao Seafood. And if you're feeling adventurous, you can even try the unique Crocodile Sisig. When it comes to Filipino cuisine, there are a few dishes that stand out as fan favorites.<br><br>
+
+                If you're planning a trip to Palawan, make sure to try the delicious Lato seaweed dish that is highly sought-after by locals and tourists alike. If you're looking to try some authentic cashew treats, Coron is definitely the place to be. You won't want to miss out on the delicious Bandi and Brittle options available. Filipino cuisine is known for its delectable pastries and savory dishes. One of the most popular pastries is hopia, which is typically filled with beans. Another must-try dish is danggit lamayo, a flavorful dish made by marinating sun-dried rabbitfish in a mixture of vinegar, garlic, and pepper. Chao Long noodles were introduced to Palawan by Vietnamese immigrants.<br><br>
+                    
+            <div class="flex flex-col items-center mb-4"><img src="/assets/imgs/articles/palawan/Bacuit Arch.png" class="w-[100%] block" alt="palawan-place"> <small class="text-gray-400 text-center">Credits: @mheltravel</small></div>
+
+                Palawan is an absolute paradise for adventure seekers, with its stunning array of unique flora and fauna, ancient caves, and hidden beaches just waiting to be explored. The Saint Paul Subterranean River National Park is a must-visit destination for nature enthusiasts. This park boasts of well-preserved limestone formations and a thriving forest that is home to a diverse range of wildlife. El Nido's Bacuit Bay boasts of the stunning Big Lagoon, a popular spot among tourists.<br><br>
+                
+                Meanwhile, nature enthusiasts and thrill-seekers shouldn't miss the Puerto Princesa Underground River. The Calamian Islands, particularly Coron, are a must-visit for scuba diving and snorkeling aficionados. These islands boast of crystal-clear waters, unspoiled beaches, and a diverse array of marine creatures that will leave you in awe.<br><br>
+                
+                Experience the vibrant culture of the locals by joining in the diverse festivals held throughout the year. Don't miss out on the opportunity to celebrate and immerse yourself in the festivities! Experience the truly remarkable adventures that await you in Palawan! Join us now and discover the beauty of this amazing destination! <br><br></p>
+            </div>
+        <div class="sticky top-[7.3rem] text-left h-max w-[40%] max-lg:w-full max-lg:relative max-lg:top-auto">
+            <div class="bg-white p-5 rounded-md font-opensans mb-3">
+                <h1 class="font-opensans font-extrabold text-[24px] text-gray-800">Food</h1>
+                <ul class="list-disc font-opensans font-medium px-5">
+                    <li>Crocodile Sisig</li>
+                    <li>Tamilok</li>
+                    <li>Lechon</li>
+                    <li>Seafoods</li>
+                    <li>Lato Seaweed</li>
+                    <li>Halo-Halo</li>
+                    <li>Bandi and Brittle Cashew</li>
+                    <li>Danggit</li>
+                    <li>Hopia</li>
+                    <li>Chao Long Noodles</li>
+                </ul>            
+            </div>
+            <div class="bg-white p-5 rounded-md font-opensans mb-3">
+                <h1 class="font-opensans font-extrabold text-[24px] text-gray-800">Famous Spots</h1>
+                <ul class="list-disc font-opensans font-medium px-5">
+                    <li>El Nido, Bacuit Bay</li>
+                    <li>Puerto Princesa Underground River</li>
+                    <li>Coron and Calamian Islands</li>
+                    <li>Tubbataha Reef</li>
+                    <li>Taytay</li>
+                    <li>Balabac</li>
+                </ul>
+            </div>
+            <div class="bg-white px-3 rounded-md font-opensans pb-1">
+                <h1 class="font-extrabold text-[24px] text-gray-800">Comments</h1>
+                <div class="relative my-2">
+                    <div class="absolute inset-y-0 left-0 flex pl-3 pt-2.5 pointer-events-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"/></svg>
+                    </div>
+                    <textarea id="subject" name="message" autocomplete="off" rows="5" cols="50" class="cursor-not-allowed bg-[#D9D9D9] resize-none border border-gray-300 text-[#808080] focus:text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5" 
+                    placeholder="You must be logged in to post a comment... " disabled></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+
+    </footer>
+
+	<!--scripts-->
+	<script>
+        // Burger menus
+        document.addEventListener('DOMContentLoaded', function() {
+            // open
+            const burger = document.querySelectorAll('.navbar-burger');
+            const menu = document.querySelectorAll('.navbar-menu');
+        
+            if (burger.length && menu.length) {
+                for (var i = 0; i < burger.length; i++) {
+                    burger[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        
+            // close
+            const close = document.querySelectorAll('.navbar-close');
+            const backdrop = document.querySelectorAll('.navbar-backdrop');
+        
+            if (close.length) {
+                for (var i = 0; i < close.length; i++) {
+                    close[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        
+            if (backdrop.length) {
+                for (var i = 0; i < backdrop.length; i++) {
+                    backdrop[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        });
+        </script>
+</body> 
+</html> 
