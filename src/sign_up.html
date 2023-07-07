@@ -90,7 +90,7 @@
                     </div> 
                     <div class="flex items-start mb-6">
                         <div class="flex items-center h-5">
-                        <input id="remember" type="checkbox" value="agree" required class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" >
+                        <input id="remember" type="checkbox" value="" required class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" >
                         </div>
                         <label for="remember" class="ml-2 text-sm font-medium text-gray-900">I hereby declare that all the information I provided are correct.</label>
                     </div>
@@ -139,28 +139,20 @@
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
         var confirm_password = document.getElementById("confirm_password").value;
-        var agree = document.getElementById("remember").value;
-        
+
         if (password === confirm_password) {
-            if (
-            validateFields(fname) && validateFields(lname) && validateFields(phone) && validateFields(gender) &&
-            validateFields(date) && validateFields(age) && validateFields(username) && validateFields(email) &&
-            validateFields(password) && validateFields(confirm_password) && validateFields(agree)
-            ) {
             createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
+            .then((userCredential) => {
                 // success
                 const user = userCredential.user;
                 const uid = user.uid;
                 console.log(user);
 
                 e.preventDefault();
-
-                // Create the user data object 
-                let userData;
-                if (mname) {
-                    userData = {
+                set(ref(db, 'user/' + uid),
+                {
                     fname: fname,
+                    mname: mname,
                     lname: lname,
                     phone: phone,
                     gender: gender,
@@ -169,49 +161,18 @@
                     username: username,
                     email: email,
                     last_login: Date.now()
-                    };
-                } else {
-                    userData = {
-                    fname: fname,
-                    mname: '',
-                    lname: lname,
-                    phone: phone,
-                    gender: gender,
-                    date: date,
-                    age: age,
-                    username: username,
-                    email: email,
-                    last_login: Date.now()
-                    };
-                }
-                set(ref(db, 'user/' + uid), userData)
-                    .then(() => {
-                    alert("You are now Registered! Proceed to Log In Page");
-                    })
-                    .catch((error) => {
-                    alert(error);
-                    });
-                })
-                .catch((error) => {
+                });
+            })
+            .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(errorMessage);
                 alert(error);
-                });
-            }            
-        } else {
+            });
+        }
+        else {
             alert("Passwords do not match!");
         }
-        });
-
-    // If there are null values
-    function validateFields(field){
-        if (field == null || field.length <= 0){
-            alert("Please fill out all the necessary information")
-            return false
-        } else {
-            return true
-        }
-    }
+    });
 </script>
 </html> 
