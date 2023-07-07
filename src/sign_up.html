@@ -94,7 +94,7 @@
                         </div>
                         <label for="remember" class="ml-2 text-sm font-medium text-gray-900">I hereby declare that all the information I provided are correct.</label>
                     </div>
-                    <button id="register" class="mb-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
+                    <button id="register" type="button" class="mb-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
                 </form>
 	</div> 
 </body>
@@ -162,6 +162,7 @@
                     email: email,
                     last_login: Date.now()
                 });
+                if(!alert('Registered Successfully!')){window.location.reload();};
             })
             .catch((error) => {
                 const errorCode = error.code;
