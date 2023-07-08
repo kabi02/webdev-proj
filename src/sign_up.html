@@ -127,6 +127,18 @@
     const db = getDatabase(app);
     console.log(app);
 
+    // for the checkbox to have value
+    const rememberCheckbox = document.getElementById("remember");
+    rememberCheckbox.addEventListener("change", function() {
+    if (rememberCheckbox.checked) {
+        rememberCheckbox.value = "agree";
+        console.log(rememberCheckbox.value);
+    } else {
+        rememberCheckbox.value = "";
+        console.log(rememberCheckbox.value);
+    }
+    });
+
     document.getElementById("register").addEventListener("click", function(e){
         var fname = document.getElementById("f-name").value;
         var mname = document.getElementById("m-name").value;
@@ -141,18 +153,25 @@
         var confirm_password = document.getElementById("confirm_password").value;
 
         if (password === confirm_password) {
+            if (
+            validateFields(fname) && validateFields(lname) && validateFields(phone) && validateFields(gender) &&
+            validateFields(date) && validateFields(age) && validateFields(username) && validateFields(email) &&
+            validateFields(password) && validateFields(confirm_password) && rememberCheckbox.value == "agree"
+            ) {
             createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
+                .then((userCredential) => {
                 // success
                 const user = userCredential.user;
                 const uid = user.uid;
                 console.log(user);
 
                 e.preventDefault();
-                set(ref(db, 'user/' + uid),
-                {
+
+                // Create the user data object 
+                let userData;
+                if (mname) {
+                    userData = {
                     fname: fname,
-                    mname: mname,
                     lname: lname,
                     phone: phone,
                     gender: gender,
@@ -161,18 +180,53 @@
                     username: username,
                     email: email,
                     last_login: Date.now()
-                });
-            })
-            .catch((error) => {
+                    };
+                } else {
+                    userData = {
+                    fname: fname,
+                    mname: '',
+                    lname: lname,
+                    phone: phone,
+                    gender: gender,
+                    date: date,
+                    age: age,
+                    username: username,
+                    email: email,
+                    last_login: Date.now()
+                    };
+                }
+                set(ref(db, 'user/' + uid), userData)
+                    .then(() => {
+                    alert("You are now Registered! Proceed to Log In Page");
+                    window.location.href = "./sign_in.html";
+                    })
+                    .catch((error) => {
+                    alert("loob ng set()", error);
+                    });
+                })
+                .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(errorMessage);
                 alert(error);
-            });
-        }
-        else {
+                });
+            }            
+            else {
+                alert("Please fill out all necessary information");
+            }
+        } else {
             alert("Passwords do not match!");
         }
-    });
+        });
+
+    // If there are null values
+    function validateFields(field){
+        if (field == null || field.length <= 0){
+            return false
+        } 
+        else {
+            return true
+        }
+    }
 </script>
 </html> 
