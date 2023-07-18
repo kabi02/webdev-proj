@@ -93,12 +93,15 @@
             // Signed in 
             const user = userCredential.user;
             alert("Logged in successfully!");
+            window.location.href = "index.html";
             // ...
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
+            window.location.reload();
         });
     });
 </script>
+
 </html> 
