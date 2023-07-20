@@ -2,6 +2,7 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+    import { getDatabase, ref, push, set} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -22,6 +23,7 @@
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
     const auth = getAuth();
+    const db = getDatabase();
 
     // Get the content div element
     const content = document.getElementById("content");
@@ -81,7 +83,32 @@
                 </div>
 
             </div>    
-            `
+            `;
+
+            // Event listener for comments
+            document.getElementById("btn-comment").addEventListener("click", function () {
+                const commentText = document.getElementById("subject").value.trim();
+                const articleId = document.getElementById("articleId").value;
+
+                if (commentText && articleId) {
+                    const commentsRef = ref(db, "articles/" + articleId + "/comments"); // Get a reference to the "comments" node
+                    const newCommentRef = push(commentsRef); // Create a new child node under "comments"
+                    set(newCommentRef, {
+                        userId: user.uid,
+                        email: user.email,
+                        comment: commentText,
+                        timestamp: Date.now()
+                    }).then(() => {
+                        alert("Comment posted successfully!");
+                        document.getElementById("subject").value = "";
+                    }).catch((error) => {
+                        console.error("Error posting comment:", error);
+                        alert("An error occurred while posting the comment. Please try again.");
+                    });
+                } else {    
+                    alert("Please enter a comment before submitting!");
+                }
+            });
 
         } else {
             // User is logged out
