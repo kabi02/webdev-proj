@@ -39,8 +39,10 @@
 			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150" href="#">CONTACT</a></li>
 			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pl-5" href="blog.html">Blog</a></li>
 		</ul>
-		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm sm:text-base text-gray-900 font-bold rounded-xl transition duration-200 hover:bg-gray-100" href="sign_in.html">Sign In</a>
-		<a class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-500 text-sm sm:text-base text-white font-bold rounded-xl transition duration-200" href="sign_up.html">Sign up</a>
+		<div id="content" class="hidden lg:inline-block "> 
+            <!-- Sign In and Sign Up button if logged out --> 
+            <!-- Email of user if logged in --> 
+        </div>
 	</nav>
 	<div class="navbar-menu relative z-50 hidden">
 		<div class="navbar-backdrop fixed inset-0 bg-black opacity-60"></div>
@@ -106,8 +108,10 @@
             </div>
             <div class="mt-auto">
                 <div class="pt-6">
-                    <a class="block px-4 py-3 mb-3 leading-none text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl" href="sign_in.html">Sign in</a>
-                    <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-black hover:bg-gray-500 rounded-xl" href="sign_up.html">Sign Up</a>
+                    <div id="content-phone" class="pt-6">
+                        <!-- Sign In and Sign Up button if logged out --> 
+                        <!-- Email of user if logged in --> 
+                    </div>
                 </div>
                 <p class="my-4 text-xs text-center text-gray-400">
                     <span class="font-opensans">TravelMates © 2023</span>
@@ -230,6 +234,7 @@
                 }
             }
         });
-        </script>
+    </script>
+    <script src="/src/scripts/ifLoggedIn.js" type="module"></script>
 </body> 
 </html> 
