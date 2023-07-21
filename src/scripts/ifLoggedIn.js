@@ -30,10 +30,6 @@
     const phone = document.getElementById("content-phone");
     const comment = document.getElementById("comment");
 
-    function sanitizeEmail(email) {
-        return email.replace(/[.,#$[\]]/g, '_');
-      }
-
     // Function to get the user's name from the "users" table based on their email
     function getUserFullName(userId) {
         const usersRef = ref(db, "user");
