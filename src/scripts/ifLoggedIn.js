@@ -30,7 +30,7 @@
     const phone = document.getElementById("content-phone");
     const comment = document.getElementById("comment");
 
-    // Function to get the user's name from the "users" table based on their email
+    // Function to get the user's name from the "users" table based on their userID
     function getUserFullName(userId) {
         const usersRef = ref(db, "user");
         return get(child(usersRef, userId))
