@@ -76,36 +76,68 @@
         if (user) {
             // User is logged in
             content.innerHTML = `
-            <div class="text-center items-center">
-                <h1 class="font-bold">${user.email} <i class="fa-solid fa-angle-down cursor-pointer" id="arrow"></i></h1> 
-                <button id="logout" class="hidden mt-5 p-2">Logout</button>
+            <div class="text-center items-center relative mr-7">
+                <h1 class="font-bold">${user.email} <i class="fa-solid fa-angle-down inline-block absolute mt-2 ml-2 cursor-pointer" id="arrow-down"></i><i class="hidden absolute mt-2 ml-2 fa-solid fa-angle-up cursor-pointer" id="arrow-up"></i></h1> 
+            </div>
+            <div id="logout-div" class="absolute hidden">
+                <button id="logout" class="w-[10rem] bg-gray-950 text-white rounded-md mt-5 pt-2 pb-3">Logout</button>
             </div>
             `;
 
             phone.innerHTML = `
             <div class="pt-6">
                 <a class="block px-4 py-3 mb-3 leading-none text-xs text-center font-semibold rounded-xl">${user.email} </a>
-                <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-black hover:bg-gray-500 rounded-xl">Log Out</a>
+                <button id="logout-mobile" class="w-full cursor-pointer block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-black hover:bg-gray-500 rounded-xl">Log Out</button>
             </div>
             `;
 
             // Add a logout button event listener 
             document.getElementById("logout").addEventListener("click", () => { 
-                auth.signOut(); 
+                if(!confirm("Do you really want to Logout?")){}else {auth.signOut(); alert("Logged out successfully!");} 
             }); 
 
+            document.getElementById("logout-mobile").addEventListener("click", () => {
+              if(!confirm("Do you really want to Logout?")){}else {auth.signOut(); alert("Logged out successfully!");} 
+            });
+
             // Add an arrow icon event listener 
-            document.getElementById("arrow").addEventListener("click", () => { 
+            document.getElementById("arrow-down").addEventListener("click", () => { 
                 // Get the button element 
                 const button = document.getElementById("logout"); 
+                const arrowUp = document.getElementById("arrow-up");
+                const arrowDown = document.getElementById("arrow-down");
+                const logout = document.getElementById("logout-div");
+
                 // Check if the button is hidden 
-                if (button.classList.contains("hidden")) { 
-                    button.classList.remove("hidden"); 
-                    button.classList.add("block"); 
-                } else { 
-                    button.classList.remove("block"); 
-                    button.classList.add("hidden"); 
+                if (logout.classList.contains("hidden")) { 
+                    logout.classList.remove("hidden"); 
+                    logout.classList.add("flex"); 
+                    arrowDown.classList.remove("inline-block");
+                    arrowDown.classList.add("hidden"); 
+                    arrowUp.classList.remove("hidden");
+                    arrowUp.classList.add("inline-block"); 
                 } 
+                
+                else { 
+                    logout.classList.remove("flex"); 
+                    logout.classList.add("hidden"); 
+                } 
+            });
+
+            // Close the logout div
+            document.getElementById("arrow-up").addEventListener("click", () => {
+                const arrowUp = document.getElementById("arrow-up");
+                const arrowDown = document.getElementById("arrow-down");
+                const logout = document.getElementById("logout-div");
+
+                if(arrowDown.classList.contains("hidden")) {
+                  arrowDown.classList.remove("hidden");
+                  arrowDown.classList.add("inline-block");
+                  arrowUp.classList.remove("inline-block");
+                  arrowUp.classList.add("hidden");
+                  logout.classList.remove("flex");
+                  logout.classList.add("hidden");
+                }
             });
 
             const articleId = document.getElementById("articleId").value;
