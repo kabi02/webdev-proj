@@ -27,28 +27,16 @@
         <div class="w-max px-6 py-6 shadow-lg bg-white rounded-2xl drop-shadow-2xl max-[450px]:w-full max-[400px]:px-8">
             <h1 class="text-3xl font-bold text-center block">Forgot Your Password?</h1><br>
             <p class="text-gray-400 px-6 text-center block">Kindly fill up the form below to reset your password.</p>
-            <form action="#">
+            <form>
                 <div class="mt-12">
-                    <label for="username">
-                        <input type="text" id="username" placeholder="Username" pattern="[a-zA-Z0-9_]+$" required
-                        class="border-b-2 w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600">
-                    </label>
-                </div>
-                <div class="mt-8">
-                    <label for="password">
-                        <input type="password" id="password" placeholder="New Password" required
-                        class="border-b-2 w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600">
-                    </label>
-                </div>
-                <div class="mt-8">
-                    <label for="password">
-                        <input type="password" id="confirm-password" placeholder="Confirm New Password" required
+                    <label for="email">
+                        <input type="email" id="email" placeholder="Email" required
                         class="border-b-2 w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600">
                     </label>
                 </div>
 
                 <div class="mt-12">
-                    <button type="submit" class="border-none bg-black text-white text-base 
+                    <button type="submit" id="reset-password" class="border-none bg-black text-white text-base 
                     h-10 w-full rounded-full hover:bg-gray-800 transition: duration-200">Reset Password</button>
                 </div>
                 
@@ -56,6 +44,63 @@
                     <a href="sign_in.html" class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-300">Back to Sign in</a>
                 </div>
             </form>
+        </div> 
 	</div> 
-</body> 
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+    import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+    import { sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyDqFpJuiKUVT4cMlq9tbdJX6nsGhG5mQck",
+        authDomain: "webdev-proj-bc572.firebaseapp.com",
+        databaseURL: "https://webdev-proj-bc572-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "webdev-proj-bc572",
+        storageBucket: "webdev-proj-bc572.appspot.com",
+        messagingSenderId: "836536231601",
+        appId: "1:836536231601:web:fac5cae09e806ac8c02490",
+        measurementId: "G-YS60DN7JXV"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
+    const db = getDatabase();
+    console.log(app);
+
+    // Event listener for the "Reset Password" button
+    document.getElementById("reset-password").addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value.trim();
+
+        if (email) {
+            // Send a password reset email to the user
+            sendPasswordResetEmail(auth, email)
+                .then(() => {
+                    alert("Password reset email sent! Please check your email.");
+                    window.location.href = "sign_in.html";
+                })
+                .catch((error) => {
+                    console.error("Error sending password reset email:", error);
+                    alert("An error occurred while sending the password reset email. Please try again.");
+                });
+        } else {
+            alert("Please enter your email address.");
+        }
+    });
+
+    
+</script>
+
+
 </html> 
