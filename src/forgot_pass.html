@@ -31,6 +31,7 @@
                 <div class="mt-12">
                     <label for="email">
                         <input type="email" id="email" placeholder="Email" required
+<<<<<<< HEAD
                         class="border-b-2 w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600">
                     </label>
                 </div>
@@ -43,12 +44,18 @@
                 <div class="mt-8">
                     <label for="password">
                         <input type="password" id="confirm-password" placeholder="Confirm New Password" required
+=======
+>>>>>>> 595ff04d01edf7f7714a3cfe099ba24a032dbf52
                         class="border-b-2 w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600">
                     </label>
                 </div>
 
                 <div class="mt-12">
+<<<<<<< HEAD
+                    <button id="forgot" type="submit" class="border-none bg-black text-white text-base 
+=======
                     <button type="submit" id="reset-password" class="border-none bg-black text-white text-base 
+>>>>>>> 595ff04d01edf7f7714a3cfe099ba24a032dbf52
                     h-10 w-full rounded-full hover:bg-gray-800 transition: duration-200">Reset Password</button>
                 </div>
                 
@@ -58,14 +65,22 @@
             </form>
         </div> 
 	</div> 
+<<<<<<< HEAD
+</body> 
+=======
 </body>
+>>>>>>> 595ff04d01edf7f7714a3cfe099ba24a032dbf52
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+<<<<<<< HEAD
+    import { getAuth, updatePassword } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+=======
     import { getAuth } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
     import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
     import { sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+>>>>>>> 595ff04d01edf7f7714a3cfe099ba24a032dbf52
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -86,6 +101,14 @@
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
     const auth = getAuth();
+<<<<<<< HEAD
+
+    console.log(app);
+
+    document.getElementById("forgot").addEventListener("click",() => {
+    });
+</script>
+=======
     const db = getDatabase();
     console.log(app);
 
@@ -115,4 +138,5 @@
 </script>
 
 
+>>>>>>> 595ff04d01edf7f7714a3cfe099ba24a032dbf52
 </html> 
