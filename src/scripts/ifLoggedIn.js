@@ -30,25 +30,24 @@
     const phone = document.getElementById("content-phone");
     const comment = document.getElementById("comment");
 
-    // Function to get the user's name from the "users" table based on their email
-    function getUserFullName(userId) {
-        const usersRef = ref(db, "user");
-        return get(child(usersRef, userId))
-          .then((snapshot) => {
-            if (snapshot.exists()) {
-              const user = snapshot.val();
-              const fullName = user.fname && user.lname ? `${user.fname} ${user.lname}` : "Unknown User";
-              return fullName;
-            } else {
-              console.log("User not found in the 'users' table.");
-              return "Unknown User"; // Default name if user not found in the "users" table
-            }
-          })
-          .catch((error) => {
-            console.error("Error getting user's name:", error);
-            return "Unknown User"; // Default name if an error occurs
-          });
-      }
+    // Function to get the user's username from the "users" table based on their userID
+    function getUserUsername(userId) {
+      const usersRef = ref(db, "user");
+      return get(child(usersRef, userId))
+        .then((snapshot) => {
+          if (snapshot.exists()) {
+            const user = snapshot.val();
+            return user.username || "Unknown User";
+          } else {
+            console.log("User not found in the 'users' table.");
+            return "Unknown User"; // Default username if user not found in the "users" table
+          }
+        })
+        .catch((error) => {
+          console.error("Error getting user's username:", error);
+          return "Unknown User"; // Default username if an error occurs
+        });
+    }
 
     function displayComments(articleId) {
         const commentsRef = ref(db, "articles/" + articleId + "/comments");
@@ -63,7 +62,7 @@
           const commentDiv = document.createElement("div");
           commentDiv.innerHTML = `
             <div class="border rounded-md p-3 mb-3">
-              <p class="font-semibold">${commentData.fullName}</p>
+              <p class="font-semibold">${commentData.username}</p>
               <p>${commentData.comment}</p>
             </div>
           `;
@@ -164,12 +163,12 @@
 
                 if (commentText && articleId) {
                     // Get the user's name from the "users" table
-                    getUserFullName(user.uid).then((fullName) => {
+                    getUserUsername(user.uid).then((username) => {
                       const commentsRef = ref(db, "articles/" + articleId + "/comments");
                       const newCommentRef = push(commentsRef);
                       set(newCommentRef, {
                         userId: user.uid,
-                        fullName: fullName, // Save the user's name in the "comments" table
+                        username: username,
                         email: user.email,
                         comment: commentText,
                         timestamp: Date.now(),
