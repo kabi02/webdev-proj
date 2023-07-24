@@ -92,11 +92,11 @@
 
             // Add a logout button event listener 
             document.getElementById("logout").addEventListener("click", () => { 
-                if(!confirm("Do you really want to Logout?")){}else {auth.signOut(); alert("Logged out successfully!");} 
+                if(!confirm("Do you really want to Logout?")){}else {auth.signOut(); alert("Logged out successfully!");window.location.replace('./index.html');} 
             }); 
 
             document.getElementById("logout-mobile").addEventListener("click", () => {
-              if(!confirm("Do you really want to Logout?")){}else {auth.signOut(); alert("Logged out successfully!");} 
+              if(!confirm("Do you really want to Logout?")){}else {auth.signOut(); alert("Logged out successfully!");window.location.replace('/.index.html')} 
             });
 
             // Add an arrow icon event listener 
