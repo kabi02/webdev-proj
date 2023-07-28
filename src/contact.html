@@ -39,8 +39,10 @@
 			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150" href="#">CONTACT</a></li>
 			<li><a class="text-sm sm:text-base font-bold text-black hover:text-gray-400 transition duration-150 pl-5" href="blog.html">Blog</a></li>
 		</ul>
-		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm sm:text-base text-gray-900 font-bold rounded-xl transition duration-200 hover:bg-gray-100" href="sign_in.html">Sign In</a>
-		<a class="hidden lg:inline-block py-2 px-6 bg-black hover:bg-gray-500 text-sm sm:text-base text-white font-bold rounded-xl transition duration-200" href="sign_up.html">Sign up</a>
+		<div id="content" class="hidden lg:inline-block "> 
+            <!-- Sign In and Sign Up button if logged out --> 
+            <!-- Email of user if logged in --> 
+        </div>
 	</nav>
 	<div class="navbar-menu relative z-50 hidden">
 		<div class="navbar-backdrop fixed inset-0 bg-black opacity-60"></div>
@@ -106,8 +108,10 @@
             </div>
             <div class="mt-auto">
                 <div class="pt-6">
-                    <a class="block px-4 py-3 mb-3 leading-none text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl" href="sign_in.html">Sign in</a>
-                    <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-black hover:bg-gray-500 rounded-xl" href="sign_up.html">Sign Up</a>
+                    <div id="content-phone" class="pt-6">
+                        <!-- Sign In and Sign Up button if logged out --> 
+                        <!-- Email of user if logged in --> 
+                    </div>
                 </div>
                 <p class="my-4 text-xs text-center text-gray-400">
                     <span class="font-opensans">TravelMates © 2023</span>
@@ -169,7 +173,7 @@
                         </div>
                         <!-- Send -->
                         <div class="text-end mt-5">
-                            <button type="submit" class="text-black bg-[#E3C52D] hover:bg-[#FEEFC2] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Send</button>
+                            <button id="inquiries-btn" type="submit" class="text-black bg-[#E3C52D] hover:bg-[#FEEFC2] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Send</button>
                         </div> 
                     </form>
                 </div>
@@ -230,6 +234,67 @@
                 }
             }
         });
-        </script>
+    </script>
+    <script src="/src/scripts/ifLoggedIn.js" type="module"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+        import { getDatabase, ref, push, set} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyDqFpJuiKUVT4cMlq9tbdJX6nsGhG5mQck",
+            authDomain: "webdev-proj-bc572.firebaseapp.com",
+            databaseURL: "https://webdev-proj-bc572-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "webdev-proj-bc572",
+            storageBucket: "webdev-proj-bc572.appspot.com",
+            messagingSenderId: "836536231601",
+            appId: "1:836536231601:web:fac5cae09e806ac8c02490",
+            measurementId: "G-YS60DN7JXV"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
+        const db = getDatabase();
+
+        // Event listener for comments
+        document.getElementById("inquiries-btn").addEventListener("click", function () {
+                event.preventDefault();
+                const nameText = document.getElementById("name-icon").value;
+                const emailText = document.getElementById("email-address-icon").value;
+                const subjectText = document.getElementById("subject-icon").value;
+                const messageText = document.getElementById("subject").value.trim();
+
+                if (nameText && emailText && subjectText && messageText) {
+                    const inquiriesRef = ref(db, "inquiries"); // Get a reference to the "inquiries" node
+                    const newInquiriesRef = push(inquiriesRef); // Create a new child node under "inquiries"
+                    set(newInquiriesRef, {
+                        name: nameText,
+                        email: emailText,
+                        subject: subjectText,
+                        message: messageText,
+                    }).then(() => {
+                        alert("Message sent successfully!");
+                        document.getElementById("name-icon").value = "";
+                        document.getElementById("email-address-icon").value = "";
+                        document.getElementById("subject-icon").value = "";
+                        document.getElementById("subject").value = "";
+                    }).catch((error) => {
+                        console.error("Error sending message:", error);
+                        alert("An error occurred while sending the message. Please try again.");
+                    });
+                } else {    
+                    alert("Please fill up all fields!");
+                }
+            });
+
+    </script>
 </body> 
 </html> 

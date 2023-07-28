@@ -10,7 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!--fontawesome import-->
     <script src="https://kit.fontawesome.com/1231aac50b.js" crossorigin="anonymous"></script>
-    <title>TravelMates' Sign In</title>
+    <title>TravelMates' Sign Up</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 
 	<!--fonts-->
@@ -24,7 +24,7 @@
 <body class="bg-[url('/assets/travelmate.jpg')] pb-8 bg-cover sm:bg-fixed scroll-px-1">
 	<!--Main Sign up div-->
     <div class="flex flex-col justify-center items-center h-full max-[450px]:px-10 max-[400px]:px-4">
-        <img src="/assets/med-logo.png" class="py-8" alt="">
+        <a href="index.html"><img src="/assets/med-logo.png" class="py-8" alt=""></a>
 
                 <form class="bg-white w-2/3 px-16 py-3 shadow-lg rounded-2xl max-[450px]:w-full max-[400px]:px-8">
                     <div>
@@ -94,9 +94,139 @@
                         </div>
                         <label for="remember" class="ml-2 text-sm font-medium text-gray-900">I hereby declare that all the information I provided are correct.</label>
                     </div>
-                    <button type="submit" class="mb-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
+                    <button id="register" type="button" class="mb-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
                 </form>
 	</div> 
 </body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyDqFpJuiKUVT4cMlq9tbdJX6nsGhG5mQck",
+        authDomain: "webdev-proj-bc572.firebaseapp.com",
+        databaseURL: "https://webdev-proj-bc572-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "webdev-proj-bc572",
+        storageBucket: "webdev-proj-bc572.appspot.com",
+        messagingSenderId: "836536231601",
+        appId: "1:836536231601:web:fac5cae09e806ac8c02490",
+        measurementId: "G-YS60DN7JXV"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
+    const db = getDatabase(app);
+    console.log(app);
+
+    // for the checkbox to have value
+    const rememberCheckbox = document.getElementById("remember");
+    rememberCheckbox.addEventListener("change", function() {
+    if (rememberCheckbox.checked) {
+        rememberCheckbox.value = "agree";
+        console.log(rememberCheckbox.value);
+    } else {
+        rememberCheckbox.value = "";
+        console.log(rememberCheckbox.value);
+    }
+    });
+
+    document.getElementById("register").addEventListener("click", function(e){
+        var fname = document.getElementById("f-name").value;
+        var mname = document.getElementById("m-name").value;
+        var lname = document.getElementById("l-name").value;
+        var phone = document.getElementById("phone").value;
+        var gender = document.getElementById("gender").value;
+        var date = document.getElementById("birthdate").value;
+        var age = document.getElementById("age").value;
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirm_password = document.getElementById("confirm_password").value;
+
+        if (password === confirm_password) {
+            if (
+            validateFields(fname) && validateFields(lname) && validateFields(phone) && validateFields(gender) &&
+            validateFields(date) && validateFields(age) && validateFields(username) && validateFields(email) &&
+            validateFields(password) && validateFields(confirm_password) && rememberCheckbox.value == "agree"
+            ) {
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                // success
+                const user = userCredential.user;
+                const uid = user.uid;
+                console.log(user);
+
+                e.preventDefault();
+
+                // Create the user data object 
+                let userData;
+                if (mname) {
+                    userData = {
+                    fname: fname,
+                    lname: lname,
+                    phone: phone,
+                    gender: gender,
+                    date: date,
+                    age: age,
+                    username: username,
+                    email: email,
+                    last_login: Date.now()
+                    };
+                } else {
+                    userData = {
+                    fname: fname,
+                    mname: '',
+                    lname: lname,
+                    phone: phone,
+                    gender: gender,
+                    date: date,
+                    age: age,
+                    username: username,
+                    email: email,
+                    last_login: Date.now()
+                    };
+                }
+                set(ref(db, 'user/' + uid), userData)
+                    .then(() => {
+                    alert("You are now Registered! Proceed to Log In Page");
+                    window.location.href = "./sign_in.html";
+                    })
+                    .catch((error) => {
+                    alert("loob ng set()", error);
+                    });
+                })
+                .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorMessage);
+                alert(error);
+                });
+            }            
+            else {
+                alert("Please fill out all necessary information");
+            }
+        } else {
+            alert("Passwords do not match!");
+        }
+        });
+
+    // If there are null values
+    function validateFields(field){
+        if (field == null || field.length <= 0){
+            return false
+        } 
+        else {
+            return true
+        }
+    }
+</script>
 </html> 
